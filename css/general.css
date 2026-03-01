@@ -1,1 +1,86 @@
-/* General CSS  */
+/* ===== DESIGN SYSTEM ===== */
+:root {
+  /* Colors */
+  --color-bg: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-dark: #020617;
+
+  --color-primary: #38bdf8;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Typography */
+  --font-main: 'Segoe UI', sans-serif;
+
+  /* Font Sizes */
+  --fs-base: 1.6rem;
+  --fs-sm: 1.4rem;
+  --fs-md: 2rem;
+  --fs-lg: 2.4rem;
+  --fs-xl: 3.2rem;
+  --fs-xxl: 4.8rem;
+
+  /* Spacing Scale */
+  --space-xs: 0.8rem;
+  --space-sm: 1.6rem;
+  --space-md: 2.4rem;
+  --sapce-lg: 3.2rem;
+  --space-xl: 4.8rem;
+
+  /* Border Radius */
+  --radius-sm: 0.6rem;
+  --radius-md: 0.8rem;
+  --radius-lg: 1.2rem;
+
+  /* Transition */
+  --transition: 0.3s ease;
+}
+
+/* ===== RESET ===== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE FONT SCALING ===== */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-main);
+  background: linear-gradient(135deg, var(--color-bg), var(--color-bg-secondary));
+  color: var(--color-white);
+  line-height: 1.6;
+  font-size: var(--fs-base);
+
+  padding: 8rem;
+
+  overflow-x: hidden;
+}
+
+/* ========================== */
+/* GENRAL REUSABLE COMPONENTS */
+/* ========================== */
+
+.container {
+  width: 90%;
+  max-width: 110rem;
+  /* padding: 0 3.2rem; */
+  margin: 0 auto;
+}
+
+.section {
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3.2rem;
+  margin-bottom: 3rem;
+  color: var(--color-primary);
+}
