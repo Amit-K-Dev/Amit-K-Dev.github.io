@@ -434,3 +434,27 @@
   color: var(--color-primary);
   text-decoration: none;
 }
+
+.project-screenshot img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: var(--space-md);
+}
+
+.metric-card {
+  background: var(--color-bg-secondary);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.metric-card h3 {
+  font-size: var(--fs-xl);
+  color: var(--color-primary);
+}
