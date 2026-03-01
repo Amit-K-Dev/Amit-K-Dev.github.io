@@ -39,6 +39,10 @@
   .project-card {
     width: 90%;
   }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ===== Large Mobile (576px) ===== */
