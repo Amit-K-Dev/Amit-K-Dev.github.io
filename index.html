@@ -124,7 +124,7 @@
 
 <header>
     <h1>Amit Kumar</h1>
-    <h2>Data Analyst</h2>
+    <h2><span id="typing"></span></h2>
     <p>SQL | Power BI | Excel | Python</p>
 
     <a href="https://github.com/Amit-K-Dev" target="_blank">
@@ -171,5 +171,33 @@
     © 2026 Amit Kumar | Data Analyst Portfolio
 </footer>
 
+
+<script>
+const texts = ["Data Analyst", "SQL Specialist", "Power BI Developer", "Dashboard Builder"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type() {
+    if (count === texts.length) {
+        count = 0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("typing").textContent = letter;
+
+    if (letter.length === currentText.length) {
+        setTimeout(() => {
+            index = 0;
+            count++;
+            setTimeout(type, 300);
+        }, 1500);
+    } else {
+        setTimeout(type, 80);
+    }
+})();
+</script>
 </body>
 </html>
