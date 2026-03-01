@@ -2,17 +2,22 @@
 <html lang="en">
 
 <head>
+  <!-- ===== META ===== -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Amit Kumar - Data Analyst Portfolio showcasing SQL, Power BI, Excel, and Python projects">
+  <meta name="author" content="Amit Kumar">
 
-  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+  <title>Amit Kumar | Data Analyst</title>
+
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 
+  <!-- ===== CSS ===== -->
   <link rel="stylesheet" href="css/general.css">
   <link rel="stylesheet" href="css/queries.css">
   <link rel="stylesheet" href="css/style.css">
@@ -22,69 +27,283 @@
 
   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
   <script defer src="js/script.js"></script>
-
-
-
-  <title>Amit Kumar | Data Analyst</title>
 </head>
 
 <body>
 
-  <header>
-    <h1>Amit Kumar</h1>
-    <h2><span id="typing"></span></h2>
-    <p>SQL | Power BI | Excel | Python</p>
+  <!-- =========================================== -->
+  <!-- ================== HEADER ================= -->
+  <!-- =========================================== -->
 
-    <a href="https://github.com/Amit-K-Dev" target="_blank">
-      <button>View GitHub</button>
-    </a>
-    <a href="resume/Amit_Kumar_Data_Analyst_Resume.pdf" target="_blank">
-      <button>Download Resume</button>
-    </a>
+  <header class="header">
+    <div class="container header-container">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        AK
+      </a>
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link nav-cta" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-overlay"></div>
+
+      <!-- Mobile Button -->
+      <button class="btn-mobile-nav" aria-label="Toggle navigation">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav close-icon" name="close-outline"></ion-icon>
+      </button>
+
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      Aspiring Data Analyst passionate about transforming raw data into actionable business insights.
-      Experienced in building SQL queries, Power BI dashboards, and Excel automation systems.
-    </p>
-  </section>
+  <main>
 
-  <section>
-    <h2>Projects</h2>
+    <!-- =========================================== -->
+    <!-- =================== HERO ================== -->
+    <!-- =========================================== -->
+    <section class="hero">
+      <div class="container hero-container">
 
-    <div class="projects">
-      <div class="card">
-        <h3>SQL Business Insights</h3>
-        <p>Analyzed sales data using advanced SQL queries to identify revenue trends and customer behavior patterns.</p>
+        <h1 class="hero-title">Amit Kumar</h1>
+
+        <h2 class="hero-subtitle"><span id="typing"></span></h2>
+
+        <p>
+          <strong>SQL | Power BI | Excel | Python</strong>
+        </p>
+        <p class="hero-text">Transforming raw data into meaningful business insights.</p>
+
+        <div class="hero-buttons">
+          <a class="btn" href="https://github.com/Amit-K-Dev" target="_blank">View GitHub</a>
+          <a class="btn btn-secondary" href="assets/resume/Amit_Kumar_Data_Analyst_Resume.pdf" target="_blank">Download
+            Resume</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================== -->
+    <!-- ================== ABOUT ================== -->
+    <!-- =========================================== -->
+    <section id="about" class="section">
+      <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="section-text">
+          Aspiring Data Analyst skilled in SQL, Power BI, Excel dashboard development, and Python. Passionate about
+          uncovering insights that drive data-driven decision-making.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- =========================================== -->
+    <!-- ================= PROJECTS ================ -->
+    <!-- =========================================== -->
+    <section id="projects" class="section dark-section">
+      <div class="container">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+
+          <a href="projects/sql.html" class="project-card">
+
+            <div class="project-image">
+              <img src="assets/images/sql-project.png" alt="SQL Business Insights Dashboard">
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">SQL Business Insights</h3>
+              <p class="project-text">
+                Advanced SQL analysis of sales trends, revenue growth, and customer segmentation.
+              </p>
+              <span class="project-link">
+                View Project →
+              </span>
+            </div>
+
+          </a>
+
+          <a href="projects/powerbi.html" class="project-card">
+
+            <div class="project-image">
+              <img src="assets/images/powerbi-dashboard.png" alt="Power BI Sales Dashboard">
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Power BI Sales Dashboard</h3>
+              <p class="project-text">
+                Interactive KPI dashboard analyzing revenue, profit margin, and top-performing products.
+              </p>
+              <span class="project-link">
+                View Project →
+              </span>
+            </div>
+
+          </a>
+
+          <a href="projects/excel.html" class="project-card">
+
+            <div class="project-image">
+              <img src="assets/images/excel-funnel.png" alt="Excel Marketing Funnel Dashboard">
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Excel Marketing Funnel</h3>
+              <p class="project-text">
+                Automated dashboard calculating CTR, conversion rate, and revenue share analysis.
+              </p>
+              <span class="project-link">
+                View Project →
+              </span>
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================== -->
+    <!-- ================= CONTACT ================= -->
+    <!-- =========================================== -->
+    <section class="section" id="contact">
+
+      <div class="container">
+
+        <h2 class="section-title">Contact</h2>
+
+        <h3 class="section-text">Work With Me</h3>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <p>
+              Email:
+              <a class="btn-contact" href="mailto:kumar.amit2648@gmail.com">Email Me</a>
+            </p>
+            <p>
+              LinkedIn:
+              <a class="btn-contact" href="https://www.linkedin.com/in/amit-k-dev/" target="_blank">Connect with
+                me</a>
+            </p>
+
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Power BI Sales Dashboard</h3>
-        <p>Designed interactive KPI dashboards tracking revenue, profit margins, and top-performing products.</p>
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-card">
+
+            <h2 class="section-title">Get in touch!</h2>
+            <p class="section-text">
+              ---
+            </p>
+
+            <form class="contact-form" name="message">
+              <div>
+                <label for="full-name">Full Name</label>
+                <input id="full-name" type="text" placeholder="Amit Kumar" name="full-name" required />
+              </div>
+
+              <div>
+                <label for="email">Email address</label>
+                <input id="email" type="email" placeholder="me@example.com" name="email" required />
+              </div>
+
+              <div>
+                <label for="select-subject">Subject</label>
+                <select id="select-subject" name="select-subject" required>
+                  <option value="">Please choose one subjet:</option>
+                  <option value="project offer">Project offer</option>
+                  <option value="job offer">Job offer</option>
+                  <option value="connection and networking">Connection and networking</option>
+                  <option value="mentorship">Mentorship</option>
+                  <option value="others">Others</option>
+                </select>
+              </div>
+
+              <div class="contact-form__row">
+                <div class="contact-form__field">
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" placeholder="Enter your message" rows="6" required></textarea>
+                </div>
+                <input type="hidden" name="subject" value="New Submission from my portfolio website">
+                <input type="hidden" name="from_name" value="Get in touch Portfolio website">
+              </div>
+
+              <button class="btn btn--contact__form">Send Message</button>
+
+            </form>
+
+          </div>
+
+          <div class="contact-form__img-box" role="img" aria-label="Woman enjoying food"></div>
+        </div>
+
       </div>
 
-      <div class="card">
-        <h3>Excel Marketing Funnel</h3>
-        <p>Built automated marketing funnel dashboard calculating CTR, conversion rates, and revenue breakdown.</p>
+    </section>
+
+  </main>
+
+  <!-- =========================================== -->
+  <!-- ================== FOOTER ================= -->
+  <!-- =========================================== -->
+  <footer class="footer">
+
+    <div class="container grid grid--footer">
+      <div class="logo-col">
+        <a href="#" class="footer-logo">
+          <img src="assets/images/logo.png" alt="Amit Kumar Data Analyst logo" class="logo">
+        </a>
+
+        <ul class="social-links">
+          <li>
+            <a class="footer-link" href="https://www.linkedin.com/in/amit-k-dev/"><ion-icon class="social-icon"
+                name="logo-linkedin"></ion-icon></a>
+          </li>
+          <li>
+            <a class="footer-link" href="https://github.com/Amit-K-Dev"><ion-icon class="social-icon"
+                name="logo-github"></ion-icon></a>
+          </li>
+          <li>
+            <a class="footer-link" href="https://x.com/AmitKumarDev_"><ion-icon class="social-icon"
+                name="logo-twitter"></ion-icon></a>
+          </li>
+        </ul>
       </div>
+
+      <p class="copyright">
+        &copy; <span class="year">2026</span> Amit Kumar | Data Analyst Portfolio. All rights reserved.
+      </p>
     </div>
-  </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:kumar.amit2648@gmail.com">Email Me</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/amit-k-dev/">Message on LinkedIn</a></p>
-  </section>
-
-  <footer>
-    © 2026 Amit Kumar | Data Analyst Portfolio
   </footer>
 
+  <!-- =========================================== -->
+  <!-- ============== PROJECT MODAL ============== -->
+  <!-- =========================================== -->
+  <div class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3 class="modal-title"></h3>
+      <p class="modal-description"></p>
+    </div>
+  </div>
 
-  <body>
 
-  </body>
+</body>
 
 </html>
