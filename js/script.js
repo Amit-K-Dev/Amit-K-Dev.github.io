@@ -27,13 +27,6 @@ const type = function () {
 type();
 
 /* ===================================== */
-/* ====== SET CURRENT YEAR ========= */
-/* ===================================== */
-const yearEl = document.querySelector(".year");
-const currentYear = new Date().getFullYear();
-yearEl.textContent = currentYear;
-
-/* ===================================== */
 /* ====== STICKY NAV ON SCROLL ========= */
 /* ===================================== */
 const header = document.querySelector(".header");
@@ -166,3 +159,10 @@ projectCards.forEach((card) => {
 modalClose.addEventListener("click", () => {
   modal.classList.add("hidden");
 });
+
+/* ===================================== */
+/* ====== SET DYNAMC YEAR ========= */
+/* ===================================== */
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
