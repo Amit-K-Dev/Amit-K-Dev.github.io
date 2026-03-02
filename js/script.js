@@ -38,7 +38,7 @@ type();
 /* ===================================== */
 const header = document.querySelector(".header");
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
     header.classList.add("scrolled");
   } else {
