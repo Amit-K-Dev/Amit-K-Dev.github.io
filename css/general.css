@@ -1,18 +1,19 @@
-/* ===== DESIGN SYSTEM ===== */
+/* ===================================== */
+/* ============ DESIGN SYSTEM ========== */
+/* ===================================== */
 :root {
-  /* Colors */
+  /* ===== Colors ===== */
   --color-bg: #0f172a;
   --color-bg-secondary: #1e293b;
-  --color-dark: #020617;
+  --color-bg-dark: #020617;
 
   --color-primary: #38bdf8;
   --color-white: #ffffff;
   --color-black: #000000;
 
-  /* Typography */
-  --font-main: 'Segoe UI', sans-serif;
+  /* ===== Typography ===== */
+  --font-main: "Segoe UI", sans-serif;
 
-  /* Font Sizes */
   --fs-base: 1.6rem;
   --fs-sm: 1.4rem;
   --fs-md: 2rem;
@@ -20,57 +21,72 @@
   --fs-xl: 3.2rem;
   --fs-xxl: 4.8rem;
 
-  /* Spacing Scale */
+  /* ===== Spacing ===== */
   --space-xs: 0.8rem;
   --space-sm: 1.6rem;
   --space-md: 2.4rem;
   --space-lg: 3.2rem;
   --space-xl: 4.8rem;
 
-  /* Border Radius */
+  /* ===== Radius ===== */
   --radius-sm: 0.6rem;
   --radius-md: 0.8rem;
   --radius-lg: 1.2rem;
 
-  /* Transition */
+  /* ===== Motion ===== */
   --transition: 0.3s ease;
+
+  /* ===== Layout ===== */
+  --header-height: 8rem;
 }
 
-/* ===== RESET ===== */
-* {
-  padding: 0;
+/* ===================================== */
+/* ============== RESET ================ */
+/* ===================================== */
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BASE FONT SCALING ===== */
+/* ===================================== */
+/* ============ BASE SETUP ============= */
+/* ===================================== */
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-
-  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-main);
-  background: linear-gradient(135deg, var(--color-bg), var(--color-bg-secondary));
-  color: var(--color-white);
-  line-height: 1.6;
   font-size: var(--fs-base);
-
-  padding: 8rem;
-
-  overflow-x: hidden;
+  line-height: 1.6;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-bg), var(--color-bg-secondary));
 }
 
-/* ========================== */
-/* GENRAL REUSABLE COMPONENTS */
-/* ========================== */
+/* Offset for fixed header */
+main {
+  margin-top: var(--header-height);
+}
+
+/* ===================================== */
+/* ======= REUSABLE COMPONENTS ========= */
+/* ===================================== */
+.page-wrapper {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.page-wrapper.loaded {
+  opacity: 1;
+}
 
 .container {
   width: 90%;
   max-width: 110rem;
-  /* padding: 0 3.2rem; */
   margin: 0 auto;
 }
 
@@ -80,7 +96,7 @@ body {
 }
 
 .section-title {
-  font-size: 3.2rem;
-  margin-bottom: 3rem;
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-lg);
   color: var(--color-primary);
 }
