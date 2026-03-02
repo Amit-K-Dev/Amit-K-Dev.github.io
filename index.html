@@ -30,280 +30,341 @@
 </head>
 
 <body>
-
-  <!-- =========================================== -->
-  <!-- ================== HEADER ================= -->
-  <!-- =========================================== -->
-
-  <header class="header">
-    <div class="container header-container">
-
-      <!-- Logo -->
-      <a href="#" class="logo">
-        AK
-      </a>
-
-      <!-- Navigation -->
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li>
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link nav-cta" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-overlay"></div>
-
-      <!-- Mobile Button -->
-      <button class="btn-mobile-nav" aria-label="Toggle navigation">
-        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-        <ion-icon class="icon-mobile-nav close-icon" name="close-outline"></ion-icon>
-      </button>
-
-    </div>
-  </header>
-
-  <main>
+  <div class="page-wrapper">
 
     <!-- =========================================== -->
-    <!-- =================== HERO ================== -->
+    <!-- ================== HEADER ================= -->
     <!-- =========================================== -->
-    <section class="hero">
-      <div class="container hero-container">
+    <header class="header">
+      <div class="container header-container">
 
-        <h1 class="hero-title">Amit Kumar</h1>
-
-        <h2 class="hero-subtitle"><span id="typing"></span></h2>
-
-        <p>
-          <strong>SQL | Power BI | Excel | Python</strong>
-        </p>
-        <p class="hero-text">Transforming raw data into meaningful business insights.</p>
-
-        <div class="hero-buttons">
-          <a class="btn" href="https://github.com/Amit-K-Dev" target="_blank">View GitHub</a>
-          <a class="btn btn-secondary" href="assets/resume/Amit_Kumar_Data_Analyst_Resume.pdf" target="_blank">Download
-            Resume</a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =========================================== -->
-    <!-- ================== ABOUT ================== -->
-    <!-- =========================================== -->
-    <section id="about" class="section">
-      <div class="container">
-
-        <h2 class="section-title">About Me</h2>
-
-        <p class="section-text">
-          Aspiring Data Analyst skilled in SQL, Power BI, Excel dashboard development, and Python. Passionate about
-          uncovering insights that drive data-driven decision-making.
-        </p>
-
-      </div>
-    </section>
-
-    <!-- =========================================== -->
-    <!-- ================= PROJECTS ================ -->
-    <!-- =========================================== -->
-    <section id="projects" class="section dark-section">
-      <div class="container">
-
-        <h2 class="section-title">Projects</h2>
-
-        <div class="projects-grid">
-
-          <a href="projects/sql.html" class="project-card">
-
-            <div class="project-image">
-              <img src="assets/images/sql-project.png" alt="SQL Business Insights Dashboard">
-            </div>
-
-            <div class="project-content">
-              <h3 class="project-title">SQL Business Insights</h3>
-              <p class="project-text">
-                Advanced SQL analysis of sales trends, revenue growth, and customer segmentation.
-              </p>
-              <span class="project-link">
-                View Project →
-              </span>
-            </div>
-
-          </a>
-
-          <a href="projects/powerbi.html" class="project-card">
-
-            <div class="project-image">
-              <img src="assets/images/powerbi-dashboard.png" alt="Power BI Sales Dashboard">
-            </div>
-
-            <div class="project-content">
-              <h3 class="project-title">Power BI Sales Dashboard</h3>
-              <p class="project-text">
-                Interactive KPI dashboard analyzing revenue, profit margin, and top-performing products.
-              </p>
-              <span class="project-link">
-                View Project →
-              </span>
-            </div>
-
-          </a>
-
-          <a href="projects/excel.html" class="project-card">
-
-            <div class="project-image">
-              <img src="assets/images/excel-funnel.png" alt="Excel Marketing Funnel Dashboard">
-            </div>
-
-            <div class="project-content">
-              <h3 class="project-title">Excel Marketing Funnel</h3>
-              <p class="project-text">
-                Automated dashboard calculating CTR, conversion rate, and revenue share analysis.
-              </p>
-              <span class="project-link">
-                View Project →
-              </span>
-            </div>
-
-          </a>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =========================================== -->
-    <!-- ================= CONTACT ================= -->
-    <!-- =========================================== -->
-    <section class="section" id="contact">
-
-      <div class="container">
-
-        <h2 class="section-title">Contact</h2>
-
-        <h3 class="section-text">Work With Me</h3>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <p>
-              Email:
-              <a class="btn-contact" href="mailto:kumar.amit2648@gmail.com">Email Me</a>
-            </p>
-            <p>
-              LinkedIn:
-              <a class="btn-contact" href="https://www.linkedin.com/in/amit-k-dev/" target="_blank">Connect with
-                me</a>
-            </p>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="contact-grid">
-
-          <div class="contact-card">
-
-            <h2 class="section-title">Get in touch!</h2>
-            <p class="section-text">
-              ---
-            </p>
-
-            <form class="contact-form" name="message">
-              <div>
-                <label for="full-name">Full Name</label>
-                <input id="full-name" type="text" placeholder="Amit Kumar" name="full-name" required />
-              </div>
-
-              <div>
-                <label for="email">Email address</label>
-                <input id="email" type="email" placeholder="me@example.com" name="email" required />
-              </div>
-
-              <div>
-                <label for="select-subject">Subject</label>
-                <select id="select-subject" name="select-subject" required>
-                  <option value="">Please choose one subjet:</option>
-                  <option value="project offer">Project offer</option>
-                  <option value="job offer">Job offer</option>
-                  <option value="connection and networking">Connection and networking</option>
-                  <option value="mentorship">Mentorship</option>
-                  <option value="others">Others</option>
-                </select>
-              </div>
-
-              <div class="contact-form__row">
-                <div class="contact-form__field">
-                  <label for="message">Message</label>
-                  <textarea name="message" id="message" placeholder="Enter your message" rows="6" required></textarea>
-                </div>
-                <input type="hidden" name="subject" value="New Submission from my portfolio website">
-                <input type="hidden" name="from_name" value="Get in touch Portfolio website">
-              </div>
-
-              <button class="btn btn--contact__form">Send Message</button>
-
-            </form>
-
-          </div>
-
-          <div class="contact-form__img-box" role="img" aria-label="Woman enjoying food"></div>
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- =========================================== -->
-  <!-- ================== FOOTER ================= -->
-  <!-- =========================================== -->
-  <footer class="footer">
-
-    <div class="container grid grid--footer">
-      <div class="logo-col">
-        <a href="#" class="footer-logo">
-          <img src="assets/images/logo.png" alt="Amit Kumar Data Analyst logo" class="logo">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          AK
         </a>
 
-        <ul class="social-links">
-          <li>
-            <a class="footer-link" href="https://www.linkedin.com/in/amit-k-dev/"><ion-icon class="social-icon"
-                name="logo-linkedin"></ion-icon></a>
-          </li>
-          <li>
-            <a class="footer-link" href="https://github.com/Amit-K-Dev"><ion-icon class="social-icon"
-                name="logo-github"></ion-icon></a>
-          </li>
-          <li>
-            <a class="footer-link" href="https://x.com/AmitKumarDev_"><ion-icon class="social-icon"
-                name="logo-twitter"></ion-icon></a>
-          </li>
-        </ul>
+        <!-- Navigation -->
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link nav-cta" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-overlay"></div>
+
+        <!-- Mobile Button -->
+        <button class="btn-mobile-nav" aria-label="Toggle navigation">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <ion-icon class="icon-mobile-nav close-icon" name="close-outline"></ion-icon>
+        </button>
+
+      </div>
+    </header>
+
+    <main>
+
+      <!-- =========================================== -->
+      <!-- =================== HERO ================== -->
+      <!-- =========================================== -->
+      <section class="hero">
+        <div class="container hero-container">
+
+          <h1 class="hero-title">Amit Kumar</h1>
+
+          <h2 class="hero-subtitle"><span id="typing"></span></h2>
+
+          <p>
+            <strong>SQL | Power BI | Excel | Python</strong>
+          </p>
+          <p class="hero-text">Transforming raw data into meaningful business insights.</p>
+
+          <div class="hero-buttons">
+            <a class="btn" href="https://github.com/Amit-K-Dev" target="_blank">View GitHub</a>
+            <a class="btn btn-secondary" href="assets/resume/Amit_Kumar_Data_Analyst_Resume.pdf"
+              target="_blank">Download
+              Resume</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================== -->
+      <!-- ================== ABOUT ================== -->
+      <!-- =========================================== -->
+      <section id="about" class="section">
+        <div class="container">
+
+          <h2 class="section-title">About Me</h2>
+
+          <p class="section-text">
+            Aspiring Data Analyst skilled in SQL, Power BI, Excel dashboard development, and Python. Passionate about
+            uncovering insights that drive data-driven decision-making.
+          </p>
+
+        </div>
+      </section>
+
+      <!-- =========================================== -->
+      <!-- ================= PROJECTS ================ -->
+      <!-- =========================================== -->
+      <section id="projects" class="section dark-section">
+        <div class="container">
+
+          <h2 class="section-title">Projects</h2>
+
+          <div class="projects-grid">
+
+            <a href="projects/sql.html" class="project-card">
+
+              <div class="project-image">
+                <img src="assets/images/sql-project.png" alt="SQL Business Insights Dashboard">
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">SQL Business Insights</h3>
+                <p class="project-text">
+                  Advanced SQL analysis of sales trends, revenue growth, and customer segmentation.
+                </p>
+                <span class="project-link">
+                  View Project →
+                </span>
+              </div>
+
+            </a>
+
+            <a href="projects/powerbi.html" class="project-card">
+
+              <div class="project-image">
+                <img src="assets/images/powerbi-dashboard.png" alt="Power BI Sales Dashboard">
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">Power BI Sales Dashboard</h3>
+                <p class="project-text">
+                  Interactive KPI dashboard analyzing revenue, profit margin, and top-performing products.
+                </p>
+                <span class="project-link">
+                  View Project →
+                </span>
+              </div>
+
+            </a>
+
+            <a href="projects/excel.html" class="project-card">
+
+              <div class="project-image">
+                <img src="assets/images/excel-funnel.png" alt="Excel Marketing Funnel Dashboard">
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">Excel Marketing Funnel</h3>
+                <p class="project-text">
+                  Automated dashboard calculating CTR, conversion rate, and revenue share analysis.
+                </p>
+                <span class="project-link">
+                  View Project →
+                </span>
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================== -->
+      <!-- ================= CONTACT ================= -->
+      <!-- =========================================== -->
+
+      <section class="section contact-section" id="contact">
+
+        <div class="container">
+
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">Let’s build something impactful together.</p>
+
+          <div class="contact-grid">
+
+            <!-- ===== Contact Info Card ===== -->
+            <div class="contact-info">
+
+              <h3>Work With Me</h3>
+
+              <p>
+                Whether it's a data analytics project, dashboard development,
+                or collaboration opportunity — feel free to reach out.
+              </p>
+
+              <div class="contact-links">
+
+                <a class="contact-link" href="mailto:kumar.amit2648@gmail.com">
+                  📧 Email Me
+                </a>
+
+                <a class="contact-link" href="https://www.linkedin.com/in/amit-k-dev/" target="_blank"
+                  rel="noopener noreferrer">
+                  🔗 Connect on LinkedIn
+                </a>
+
+              </div>
+
+            </div>
+
+            <!-- ===== Contact Form ===== -->
+            <div class="contact-form-wrapper">
+
+              <h3>Send a Message</h3>
+
+              <form class="contact-form" method="POST">
+
+                <div class="form-group">
+                  <label for="full-name">Full Name</label>
+                  <input id="full-name" type="text" name="full-name" placeholder="Your Name" autocomplete="name"
+                    required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email"
+                    required>
+                </div>
+
+                <div class="form-group">
+                  <label for="select-subject">Subject</label>
+                  <select id="select-subject" name="subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="project">Project Inquiry</option>
+                    <option value="job">Job Opportunity</option>
+                    <option value="networking">Networking</option>
+                    <option value="mentorship">Mentorship</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="6" placeholder="Write your message..."
+                    required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+    </main>
+
+    <!-- =========================================== -->
+    <!-- ================== FOOTER ================= -->
+    <!-- =========================================== -->
+
+    <footer class="footer">
+
+      <div class="container footer-container">
+
+        <!-- Left Column -->
+        <div class="footer-brand">
+
+          <div class="profile-img">
+            <a href="../index.html" class="footer-logo">
+              <img src="assets/images/logo.png" alt="Amit Kumar">
+            </a>
+          </div>
+
+          <p class="footer-tagline">
+            Turning data into actionable business insights.
+          </p>
+
+          <ul class="social-links">
+
+            <li>
+              <a class="footer-link" href="https://www.linkedin.com/in/amit-k-dev/" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn">
+                <ion-icon class="social-icon" name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a class="footer-link" href="https://github.com/Amit-K-Dev" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub">
+                <ion-icon class="social-icon" name="logo-github"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a class="footer-link" href="https://x.com/AmitKumarDev_" target="_blank" rel="noopener noreferrer"
+                aria-label="Twitter / X">
+                <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="footer-newsletter">
+            <h4>Stay Updated</h4>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
       </div>
 
-      <p class="copyright">
-        &copy; <span class="year">2026</span> Amit Kumar | Data Analyst Portfolio. All rights reserved.
-      </p>
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            &copy; <span class="year"></span> Amit Kumar | Data Analyst Portfolio.
+            All rights reserved.
+          </p>
+        </div>
+      </div>
+
+    </footer>
+
+    <!-- =========================================== -->
+    <!-- ============== PROJECT MODAL ============== -->
+    <!-- =========================================== -->
+    <div class="modal hidden">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3 class="modal-title"></h3>
+        <p class="modal-description"></p>
+      </div>
     </div>
 
-  </footer>
+    <button class="btn-top" aria-label="Back to top">
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
 
-  <!-- =========================================== -->
-  <!-- ============== PROJECT MODAL ============== -->
-  <!-- =========================================== -->
-  <div class="modal hidden">
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <h3 class="modal-title"></h3>
-      <p class="modal-description"></p>
-    </div>
   </div>
-
-
 </body>
 
 </html>
