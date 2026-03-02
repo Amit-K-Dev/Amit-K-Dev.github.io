@@ -2,62 +2,153 @@
 /* ============ RESPONSIVE ============= */
 /* ===================================== */
 
-/* ===== Large Desktop ===== */
+/* ===== 1200px and Below (Large Desktop) ===== */
 @media (max-width: 120rem) {
   .container {
     max-width: 100rem;
   }
 }
 
-/* ===== Laptop ===== */
+/* ===== 992px and Below (Laptop) ===== */
 @media (max-width: 99.2rem) {
-  .hero h1 {
+
+  .hero-title {
     font-size: 4rem;
-  }
-}
-
-/* ===== Tablet ===== */
-@media (max-width: 76.8rem) {
-
-  .hero h1 {
-    font-size: 3.2rem;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
   }
 
   .contact-grid {
-    grid-template-columns: 1fr;
+    gap: 5rem;
   }
 
+}
+
+/* ===== 768px and Below (Tablet) ===== */
+@media (max-width: 76.8rem) {
+
+  /* ======= HERO ======= */
+  .hero-title {
+    font-size: 3.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
+  /* ======= CONTACT → STACK ======= */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .contact-info,
+  .contact-form-wrapper {
+    width: 100%;
+    padding: 3rem;
+  }
+
+  /* ======= PROJECTS ======= */
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  /* ===== Mobile Nav Styles ===== */
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+
+    background: rgba(2, 6, 23, 0.98);
+    backdrop-filter: blur(15px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: var(--transition);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .nav-open .nav {
+    right: 0;
+  }
+
+  .nav-open .close-icon {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav:not(.close-icon) {
+    display: none;
+  }
+
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    display: none;
+  }
+
+  .nav-open .nav-overlay {
+    display: block;
+  }
 }
 
-/* ===== Large Mobile ===== */
+/* ===== 576px and Below (Large Mobile) ===== */
 @media (max-width: 57.6rem) {
 
+  /* ======= HERO ======= */
   .hero-buttons {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 1.6rem;
   }
 
   .btn {
-    width: 80%;
+    width: 100%;
     text-align: center;
   }
 
+  /* ======= SECTIONS ======= */
   .section {
-    padding: var(--space-lg) 0;
+    padding: 6rem 0;
+  }
+
+  .contact-section {
+    padding: 6rem 0;
+  }
+
+  /* ======= CONTACT CARDS ======= */
+  .contact-info,
+  .contact-form-wrapper {
+    padding: 2.4rem;
+  }
+
+  /* ======= FORM INPUTS ======= */
+  input,
+  select,
+  textarea {
+    font-size: 1.4rem;
   }
 }
 
-/* ===== Small Mobile ===== */
+/* ===== 400px and Below (Small Mobile) ===== */
 @media (max-width: 40rem) {
 
-  .hero h1 {
+  .hero-title {
     font-size: 2.8rem;
   }
 
