@@ -1,5 +1,12 @@
 "use strict";
 
+/* ===================================== */
+/* ========== PAGE FADE IN ============= */
+/* ===================================== */
+window.addEventListener("load", () => {
+  document.querySelector(".page-wrapper").classList.add("loaded");
+});
+
 const texts = [
   "Data Analyst",
   "SQL Specialist",
@@ -161,8 +168,43 @@ modalClose.addEventListener("click", () => {
 });
 
 /* ===================================== */
+/* ===== FOOTER REAVEAL OBSERVER ======= */
+/* ===================================== */
+const footerEl = document.querySelector(".footer");
+
+const footerObserver = new IntersectionObserver(
+  function (entries, observer) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+
+    footerEl.classList.add("footer-reveal");
+    observer.unobserve(entry.target);
+  },
+  { threshold: 0.2 },
+);
+
+footerObserver.observe(footerEl);
+
+/* ===================================== */
 /* =========== DYNAMC YEAR ============= */
 /* ===================================== */
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
+
+/* ===================================== */
+/* =========== BACK TO TOP ============= */
+/* ===================================== */
+const btnTop = document.querySelector(".btn-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    btnTop.classList.add("show");
+  } else {
+    btnTop.classList.remove("show");
+  }
+});
+
+btnTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
