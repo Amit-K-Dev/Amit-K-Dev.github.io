@@ -1,28 +1,24 @@
-/* ========================================= */
-/* =========== RESPONSIVE DESIGN =========== */
-/* ========================================= */
+/* ===================================== */
+/* ============ RESPONSIVE ============= */
+/* ===================================== */
 
-/* ===== Large Desktop (1200px) ===== */
+/* ===== Large Desktop ===== */
 @media (max-width: 120rem) {
   .container {
     max-width: 100rem;
   }
-
 }
 
-/* ===== Laptop (992px) ===== */
+/* ===== Laptop ===== */
 @media (max-width: 99.2rem) {
   .hero h1 {
     font-size: 4rem;
   }
-
-  .project-grid {
-    gap: var(--space-sm);
-  }
 }
 
-/* ===== Tablet (768px) ===== */
+/* ===== Tablet ===== */
 @media (max-width: 76.8rem) {
+
   .hero h1 {
     font-size: 3.2rem;
   }
@@ -31,28 +27,19 @@
     font-size: 2rem;
   }
 
-  .project-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-card {
-    width: 90%;
-  }
-
   .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* ===== Large Mobile (576px) ===== */
+/* ===== Large Mobile ===== */
 @media (max-width: 57.6rem) {
-  .hero {
-    padding: var(--space-xl) 0;
-  }
 
   .hero-buttons {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -67,17 +54,14 @@
   }
 }
 
-/* ===== Small Mobile (400px) ===== */
+/* ===== Small Mobile ===== */
 @media (max-width: 40rem) {
+
   .hero h1 {
     font-size: 2.8rem;
   }
 
   .section-title {
     font-size: 2.4rem;
-  }
-
-  .project-card {
-    padding: var(--space-sm);
   }
 }
