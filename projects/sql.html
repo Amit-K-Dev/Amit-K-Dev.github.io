@@ -11,130 +11,147 @@
 
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
   <link rel="apple-touch-icon" href="../assets/images/logo.png" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-
 
   <link rel="stylesheet" href="../css/general.css">
-  <link rel="stylesheet" href="../css/queries.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/queries.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-  <script defer src="../js/script.js"></script>
+  <script defer src="js/script.js"></script>
+
 </head>
 
-<body>
-
-  <!-- ================= PROJECT HERO ================= -->
-
-  <header class="project-hero">
-    <div class="container">
-
-      <nav class="breadcrumb">
-        <a href="../index.html">Home</a>
-        <span> / </span>
-        <span>SQL Business Insights</span>
-      </nav>
-
-      <h1 class="project-hero-title">SQL Business Insights</h1>
-
-      <p class="project-hero-subtitle">
-        Revenue trend analysis and customer segmentation using advanced SQL queries.
-      </p>
-
-      <a href="https://github.com/Amit-K-Dev/SQL-Business-Insights-Project" target="_blank" rel="noopener noreferrer"
-        class="btn">
-        View GitHub Repository
-      </a>
-
-    </div>
-  </header>
-
-  <!-- ================= MAIN CONTENT ================= -->
+<body class="project-page">
 
   <main>
 
-    <!-- ===== Overview Section ===== -->
-    <section class="section">
-      <div class="container">
+    <!-- ================= PROJECT HERO ================= -->
+    <section class="project-hero">
+      <div class="container project-hero-grid">
 
-        <h2 class="section-title">Project Overview</h2>
+        <div class="project-hero-text">
+          <p class="project-label">Case Study</p>
 
-        <p>
-          This project focuses on analyzing structured sales data using advanced SQL techniques
-          to extract actionable business insights.
-        </p>
+          <h1 class="project-hero-title">
+            SQL Business Insights Analysis
+          </h1>
 
-        <h3>Objective</h3>
-        <p>
-          To evaluate revenue trends, customer segmentation, and product performance
-          by writing optimized SQL queries on transactional datasets.
-        </p>
+          <p class="project-hero-subtitle">
+            Revenue trend and customer segmentation analysis using advanced SQL queries.
+          </p>
 
-      </div>
-    </section>
+          <div class="project-meta">
+            <span><strong>Role:</strong> Date Analyst</span>
+            <span><strong>Tools:</strong> SQL</span>
+            <span><strong>Dataset:</strong> 50,000+ Sales Records</span>
+          </div>
 
-    <!-- ===== Dashboard Preview ===== -->
-    <section class="section">
-      <div class="container">
+          <div class="project-actions">
+            <a href="https://github.com/Amit-K-Dev/SQL-Business-Insights-Project" target="_blank" class="btn">
+              View SQL Code
+            </a>
 
-        <h2 class="section-title">Dashboard Preview</h2>
-
-        <div class="project-screenshot">
-          <img src="../assets/images/sql-project.png" alt="SQL Business Insights dashboard preview">
+            <a href="../index.html#projects" class="btn btn-secondary">
+              Back to Projects
+            </a>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ===== Tools & Analysis ===== -->
+    <!-- =============== BUSINESS PROBLEM =============== -->
     <section class="section">
       <div class="container">
 
-        <h2 class="section-title">Tools & Techniques</h2>
+        <h2 class="section-title">
+          Business Problems
+        </h2>
 
-        <ul>
-          <li>MySQL / PostgreSQL</li>
-          <li>Complex JOINs & Subqueries</li>
-          <li>Aggregation & Window Functions</li>
-          <li>GROUP BY & Business KPI Calculations</li>
-        </ul>
-
-        <h3>Key Analysis Performed</h3>
-        <ul>
-          <li>Monthly revenue trend analysis</li>
-          <li>Top 10 performing products by revenue</li>
-          <li>Customer repeat purchase behavior</li>
-          <li>Revenue contribution by region</li>
-        </ul>
+        <p class="section-text">
+          The company lacked visibility into revenue performance, customer contribution, and seasonal sales behavior.
+          Leadership required structured analysis to identify growth opportunities and optimize strategic decisions.
+        </p>
 
       </div>
     </section>
 
-    <!-- ===== Metrics Section ===== -->
+    <!-- =============== DATASET OVERVIEW =============== -->
+    <section class="section case-split-section">
+      <div class="container">
+
+        <div class="case-split-grid">
+
+
+          <div class="case-block">
+            <h2 class="section-title">
+              Dataset Overview
+            </h2>
+
+            <ul class="case-list">
+              <li>50,000+ transactional records</li>
+              <li>Customer ID, Order Date, Revenue, Product Category</li>
+              <li>2-year time span</li>
+              <li>Multiple product segments</li>
+            </ul>
+          </div>
+
+          <!-- =============== ANALYSIS APPROACH =============== -->
+          <div class="case-block">
+            <h2 class="section-title">
+              Analysis Approach
+            </h2>
+
+            <ul class="case-list">
+              <li>Used GROUP BY and aggregations</li>
+              <li>Applied window functions for rankings</li>
+              <li>Performed customer segmentation analysis</li>
+              <li>Indentified seasonal trends</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =============== KEY INSIGHTS =============== -->
     <section class="section dark-section">
       <div class="container">
 
-        <h2 class="section-title">Key Metrics Identified</h2>
+        <h2 class="section-title">
+          Key Insights
+        </h2>
 
         <div class="metrics-grid">
 
           <div class="metric-card">
             <h3>+18%</h3>
-            <p>Revenue Growth (Q4)</p>
+            <p>
+              Revenue growth in Q4 compared to Q3
+            </p>
           </div>
 
           <div class="metric-card">
-            <h3>60%</h3>
-            <p>Revenue from Top Customers</p>
+            <h3>Top 10%</h3>
+            <p>
+              Customers generated 52% of total revenue
+            </p>
           </div>
 
           <div class="metric-card">
-            <h3>25%</h3>
-            <p>Repeat Purchase Rate</p>
+            <h3>Category A</h3>
+            <p>
+              Highest profit margin product segment
+            </p>
           </div>
 
         </div>
@@ -142,25 +159,31 @@
       </div>
     </section>
 
-    <!-- ===== Business Impact ===== -->
+    <!-- =============== BUSINESS IMPACT =============== -->
     <section class="section">
       <div class="container">
 
-        <h2 class="section-title">Business Impact</h2>
+        <h2 class="section-title">
+          Business Impact
+        </h2>
 
-        <p>
-          Identified that 20% of customers contributed to over 60% of total revenue,
-          emphasizing the importance of retention strategies and targeted marketing.
+        <p class="section-text">
+          The analysis enabled identification of high-value customers, improved targeting strategies, and support
+          data-driven inventory and marketing decisions.
         </p>
 
-        <div style="text-align:center; margin-top:4rem;">
-          <a href="../index.html" class="btn">← Back to Portfolio</a>
+
+        <div style="margin-top: 4rem;">
+          <a href="../index.html#projects" class="btn">
+            Back to Projects
+          </a>
         </div>
 
       </div>
     </section>
 
   </main>
+
 
 </body>
 
