@@ -1,8 +1,11 @@
 "use strict";
 
+document.documentElement.style.scrollBehavior = "smooth";
+
 /* ===================================== */
 /* ========== PAGE FADE IN ============= */
 /* ===================================== */
+
 window.addEventListener("load", () => {
   document.querySelector(".page-wrapper").classList.add("loaded");
 });
@@ -36,6 +39,7 @@ type();
 /* ===================================== */
 /* ====== STICKY NAV ON SCROLL ========= */
 /* ===================================== */
+
 const header = document.querySelector(".header");
 
 window.addEventListener("scroll", () => {
@@ -49,11 +53,13 @@ window.addEventListener("scroll", () => {
 /* ===================================== */
 /* ===== MOBILE NAV TOGGLE ============= */
 /* ===================================== */
+
 const btnMobileNav = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
 
 btnMobileNav.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
+  document.body.classList.toggle("nav-open");
 });
 
 const navLinks = document.querySelectorAll(".nav-link");
@@ -95,29 +101,34 @@ window.addEventListener("scroll", () => {
 /* ===================================== */
 /* ===== SECTION SCROLL REVEAL ========= */
 /* ===================================== */
-const allSections = document.querySelectorAll(".section");
 
-const revealSection = function (entries, observer) {
-  const [entry] = entries;
+// Run scroll reveal only on homepage
+if (!document.body.classList.contains("project-page")) {
+  const allSections = document.querySelectorAll(".section");
 
-  if (!entry.isIntersecting) return;
+  const revealSection = function (entries, observer) {
+    const [entry] = entries;
 
-  entry.target.classList.add("reveal");
-  observer.unobserve(entry.target);
-};
+    if (!entry.isIntersecting) return;
 
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: 0.15,
-});
+    entry.target.classList.add("reveal");
+    observer.unobserve(entry.target);
+  };
 
-allSections.forEach((section) => {
-  sectionObserver.observe(section);
-});
+  const sectionObserver = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.15,
+  });
+
+  allSections.forEach((section) => {
+    sectionObserver.observe(section);
+  });
+}
 
 /* ===================================== */
 /* ===== STAGGER PROJECT CARDS ========= */
 /* ===================================== */
+
 const projectSection = document.querySelector("#projects");
 const projectCards = document.querySelectorAll(".project-card");
 
@@ -142,34 +153,9 @@ const projectObserver = new IntersectionObserver(revealCards, {
 projectObserver.observe(projectSection);
 
 /* ===================================== */
-/* =========== MODAL LOGIC ============= */
-/* ===================================== */
-const modal = document.querySelector(".modal");
-const modalTitle = document.querySelector(".modal-title");
-const modalDescription = document.querySelector(".modal-description");
-const modalClose = document.querySelector(".modal-close");
-
-projectCards.forEach((card) => {
-  card.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const title = card.querySelector(".project-title").textContent;
-    const description = card.querySelector(".project-text").textContent;
-
-    modalTitle.textContent = title;
-    modalDescription.textContent = description;
-
-    modal.classList.remove("hidden");
-  });
-});
-
-modalClose.addEventListener("click", () => {
-  modal.classList.add("hidden");
-});
-
-/* ===================================== */
 /* ===== FOOTER REAVEAL OBSERVER ======= */
 /* ===================================== */
+
 const footerEl = document.querySelector(".footer");
 
 const footerObserver = new IntersectionObserver(
@@ -188,6 +174,7 @@ footerObserver.observe(footerEl);
 /* ===================================== */
 /* =========== DYNAMC YEAR ============= */
 /* ===================================== */
+
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
@@ -195,6 +182,7 @@ yearEl.textContent = currentYear;
 /* ===================================== */
 /* =========== BACK TO TOP ============= */
 /* ===================================== */
+
 const btnTop = document.querySelector(".btn-top");
 
 window.addEventListener("scroll", () => {
@@ -206,5 +194,58 @@ window.addEventListener("scroll", () => {
 });
 
 btnTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
+
+/* ===================================== */
+/* ==== SCROLL PROGRESS INDICATOR ====== */
+/* ===================================== */
+
+const progressBar = document.querySelector(".scroll-progress");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+
+  progressBar.style.width = progress + "%";
+});
+
+/* ===================================== */
+/* =========== SKILLS STATS ============ */
+/* ===================================== */
+
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver(
+  (entries, observer) => {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+
+    counters.forEach((counter) => {
+      const target = +counter.dataset.target;
+      let count = 0;
+      const increment = target / 40;
+
+      const update = () => {
+        count += increment;
+        if (count < target) {
+          counter.textContent = Math.ceil(count);
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target;
+        }
+      };
+
+      update();
+    });
+
+    observer.disconnect();
+  },
+  { threshold: 0.3 },
+);
+
+counterObserver.observe(document.querySelector(".skills-section"));
