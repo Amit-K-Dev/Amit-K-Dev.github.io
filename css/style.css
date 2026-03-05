@@ -1176,3 +1176,216 @@ textarea:focus {
   transform: translateX(6px);
   background: rgba(255, 255, 255, 0.06);
 }
+
+/* ============================================== */
+/* ========= CASE STUDY CONTENT BLOCK =========== */
+/* ============================================== */
+
+/* ========= CODE BLOCK =========== */
+.code-block {
+  margin-top: 4rem;
+  background: #0b1220;
+  border-radius: var(--radius-lg);
+  padding: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.code-block pre {
+  margin: 0;
+}
+
+.code-block code {
+  font-family: "Cascadia Code", monospace;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  line-height: 1.6;
+}
+
+/* ============================================== */
+/* ============= PROJECT LEARNING =============== */
+/* ============================================== */
+
+.learning-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.learning-item {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2.6rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.learning-item h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.learning-item p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ============================================== */
+/* ========= ANALYSIS RESULTS SECTION =========== */
+/* ============================================== */
+
+.results-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.result-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(56, 189, 248, 0.25);
+}
+
+.result-card img {
+  width: 100%;
+  display: block;
+}
+
+.result-card h3 {
+  padding: 1.8rem 2rem 0;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.result-card p {
+  padding: 0 2rem 2rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ============================================== */
+/* ========== KEY BUSINESS INSIGHTS ============= */
+/* ============================================== */
+
+.insights-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.insight-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2.8rem;
+  border-radius: var(--radius-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2.5rem rgba(56, 189, 248, 0.25);
+}
+
+.insight-card h3 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-size: 1.9rem;
+}
+
+.insight-card p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ============================================== */
+/* ========= BUSINESS IMPACT SUMMARY ============ */
+/* ============================================== */
+.impact-summary-section {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.impact-intro {
+  max-width: 70rem;
+  margin: 2rem auto 4rem;
+  font-size: 1.7rem;
+  opacity: 0.9;
+}
+
+.impact-summary-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.impact-summary-card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-summary-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(56, 189, 248, 0.25);
+}
+
+.impact-summary-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+}
+
+.impact-summary-card p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ============================================== */
+/* ===== PROJECT NAVIGATION (NEXT / PREV) ======= */
+/* ============================================== */
+
+.project-navigation {
+  padding: 8rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-nav-grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-nav {
+  display: block;
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.04);
+  text-decoration: none;
+  color: var(--color-white);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-nav:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2rem rgba(56, 189, 248, 0.25);
+}
+
+.nav-label {
+  font-size: 1.3rem;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.project-nav h3 {
+  font-size: var(--fs-base);
+  color: var(--color-primary);
+}
