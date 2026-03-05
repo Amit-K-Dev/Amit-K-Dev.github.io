@@ -23,6 +23,37 @@
     justify-content: space-between;
     align-items: flex-start;
   }
+
+  /* ==== ANALYSIS RESULTS SECTION ==== */
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ======= KEY BUSINESS INSIGHTS ======== */
+  .insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ======= IMPACT ======== */
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ======= PROJECT LEARNING ======= */
+  .learning-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ==== PROJECT NAVIGATION (NEXT / PREV) ==== */
+  /* .project-nav-grid {
+    grid-template-columns: 1fr 1fr;
+  } */
+
+  /* ===== BUSINESS IMPACT SUMMARY ==== */
+  .impact-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 /* ===== Desktop & Up (1024px+) ===== */
@@ -74,5 +105,10 @@
   .case-block:first-child {
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     padding-left: 4rem;
+  }
+
+  /* ==== ANALYSIS RESULTS SECTION ==== */
+  .results-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
