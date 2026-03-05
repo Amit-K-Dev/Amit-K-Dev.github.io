@@ -67,6 +67,8 @@
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- =============== BUSINESS PROBLEM =============== -->
     <section class="section">
       <div class="container">
@@ -82,6 +84,8 @@
 
       </div>
     </section>
+
+    <div class="section-divider"></div>
 
     <!-- =============== DATASET OVERVIEW =============== -->
     <section class="section case-split-section">
@@ -122,35 +126,72 @@
       </div>
     </section>
 
+    <div class="section-divider"></div>
 
-    <!-- =============== KEY INSIGHTS =============== -->
-    <section class="section dark-section">
+    <!-- ============= SQL QUERY EXAMPLE ============= -->
+    <section class="section">
       <div class="container">
 
         <h2 class="section-title">
-          Key Insights
+          SQL Query Example
         </h2>
 
-        <div class="metrics-grid">
+        <div class="code-block">
 
-          <div class="metric-card">
-            <h3>+18%</h3>
+          <pre><code>
+          SELECT
+              product_category,
+              SUM(revenue) AS total_revenue,
+              RANK() OVER (ORDER BY SUM(revenue) DESC) AS revenue_rank
+          FROM sales_data
+          GROUP BY product_category;
+          </code></pre>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =========== KEY BUSINESS INSIGHTS ========== -->
+    <section class="section result-section">
+      <div class="container">
+
+        <h2 class="section-title">
+          Analysis Results
+        </h2>
+
+        <div class="results-grid">
+
+          <div class="result-card">
+            <img src="../assets/images/sql-project.png" alt="Revenue by Category Chart">
+            <h3>
+              Revenue by Product Category
+            </h3>
             <p>
-              Revenue growth in Q4 compared to Q3
+              Revenue analysis reveals that a small number of product categories generate the majority of total sales.
             </p>
           </div>
 
-          <div class="metric-card">
-            <h3>Top 10%</h3>
+          <div class="result-card">
+            <img src="../assets/images/sql-project.png" alt="Customer Segmentation Chart">
+            <h3>
+              Customer Segmentation
+            </h3>
             <p>
-              Customers generated 52% of total revenue
+              Repeat customers show significantly higher lifetime value, indicating strong potential for retention
+              strategies.
             </p>
           </div>
 
-          <div class="metric-card">
-            <h3>Category A</h3>
+          <div class="result-card">
+            <img src="../assets/images/sql-project.png" alt="Seasonal Sales Trends">
+            <h3>
+              Seasonal Sales Trends
+            </h3>
             <p>
-              Highest profit margin product segment
+              Monthly sales analysis highlights seasonal peaks that could guide marketing and inventory planning.
             </p>
           </div>
 
@@ -159,19 +200,167 @@
       </div>
     </section>
 
-    <!-- =============== BUSINESS IMPACT =============== -->
+    <div class="section-divider"></div>
+
+    <!-- =========== KEY BUSINESS INSIGHTS ========== -->
     <section class="section">
+      <div class="container">
+
+        <h2 class="section-title">
+          Key Business Insights
+        </h2>
+
+        <div class="insights-grid">
+
+          <div class="insight-card">
+            <h3>
+              Revenue Concentration
+            </h3>
+            <p>
+              The top 20% of profit category generated over 60% of total revenue, indicating a strong revenue
+              concentration among high-performance the segments.
+            </p>
+          </div>
+
+          <div class="insight-card">
+            <h3>
+              High-Value Customers
+            </h3>
+            <p>
+              Window function analysis revealed that a small group of repeat customers contributed disproportionately to
+              total sales, highlighting the importance of retention strategies.
+            </p>
+          </div>
+
+          <div class="insight-card">
+            <h3>
+              Seasonal Trends
+            </h3>
+            <p>
+              Sales showed clear spikes during certain months, suggesting seasonal demand patterns that could guide
+              inventory and marketing planning.
+            </p>
+          </div>
+
+          <div class="insight-card">
+            <h3>
+              Customer Segmentation
+            </h3>
+            <p>
+              Segmenting customers by purchase frequency identified a loyal customer group with significantly higher
+              lifetime value.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =========== BUSINESS IMPACT SUMMARY ========== -->
+    <section class="section impact-summary-section">
       <div class="container">
 
         <h2 class="section-title">
           Business Impact
         </h2>
+        <P class="impact-intro">
+          The analysis highlights several opportunities for improving revenue performance and customer retention
+          strategies.
+        </P>
 
-        <p class="section-text">
-          The analysis enabled identification of high-value customers, improved targeting strategies, and support
-          data-driven inventory and marketing decisions.
-        </p>
+        <div class="impact-summary-grid">
 
+          <div class="impact-summary-card">
+            <h3>
+              Revenue Optimization
+            </h3>
+            <p>
+              Indentifying top-performing product categories allow bussiness to focus marketing and inventory strategies
+              on the segments that drive the majority of revenue.
+            </p>
+          </div>
+
+          <div class="impact-summary-card">
+            <h3>
+              Customer Retention
+            </h3>
+            <p>
+              Analysis of repeat purchase behavior rveals high-value customer segments that could benefit from loyalty
+              programs and personalized marketing.
+            </p>
+          </div>
+
+          <div class="impact-summary-card">
+            <h3>
+              Seasonal planning
+            </h3>
+            <p>
+              Recognizing seasonal sales patterns enables better demand forecasting, inventory planning, and promotional
+              timing.
+            </p>
+          </div>
+
+          <div class="impact-summary-card">
+            <h3>
+              Strategic Decision Support
+            </h3>
+            <p>
+              The insights derived from SQL analysis provide a data-driven foundation for strategic decisions related to
+              product strategy and customer growth.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =========== PROJECT LEARNING ========== -->
+    <section class="section learning-section">
+      <div class="container">
+
+        <h2 class="section-title">
+          What I Learned
+        </h2>
+
+        <div class="learning-grid">
+
+          <div class="learning-item">
+            <h3>
+              Advanced SQL Techniques
+            </h3>
+            <p>
+              This project strengthened my understanding of window functions, ranking techniques, and complex
+              aggregations for analytical queries.
+            </p>
+          </div>
+
+          <div class="learning-item">
+            <h3>
+              Data-to-Insight Thinking
+            </h3>
+            <p>
+              Beyond writing queries, I focused on translating raw data into actionable insights that could inform real
+              business decisions.
+            </p>
+          </div>
+
+          <div class="learning-item">
+            <h3>
+              Structured Analysis
+            </h3>
+            <p>
+              The project reinforced the importance of braking analysis into stage: data exploration, transformation,
+              aggregation, and insight extraction.
+            </p>
+          </div>
+
+        </div>
 
         <div style="margin-top: 4rem;">
           <a href="../index.html#projects" class="btn">
@@ -184,6 +373,52 @@
 
   </main>
 
+  <!-- =========================================== -->
+  <!-- ==== PROJECT NAVIGATION (NEXT / PREV) ===== -->
+  <!-- =========================================== -->
+
+  <section class="project-navigation">
+    <div class="container">
+
+      <div class="project-nav-grid">
+
+        <a href="powerbi.html" class="project-nav prev-project">
+          <span class="nav-label">
+            <ion-icon name="arrow-back"></ion-icon> Previous Project
+          </span>
+          <h3>Power BI Sales Dashboard</h3>
+        </a>
+
+        <a href="excel.html" class="project-nav next-project">
+          <span class="nav-label">
+            Next Project <ion-icon name="arrow-forward"></ion-icon>
+          </span>
+          <h3>
+            Excel Marketing Funnel
+          </h3>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================== -->
+  <!-- ================== FOOTER ================= -->
+  <!-- =========================================== -->
+  <footer>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; <span class="year"></span> Amit Kumar | Data Analyst Portfolio.
+          All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </footer>
 
 </body>
 
