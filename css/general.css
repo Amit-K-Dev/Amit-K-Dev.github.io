@@ -194,6 +194,13 @@ h4 {
     transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* ==== SECTION DIVIDER ==== */
+.section-divider {
+  height: 1px;
+  width: 100%;
+  margin: 8rem 0;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.5), transparent);
+}
 
 .section.reveal {
   opacity: 1;
