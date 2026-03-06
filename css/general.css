@@ -150,6 +150,12 @@ h4 {
   letter-spacing: -0.3px;
 }
 
+code {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem;
+}
+
 .section-title {
   font-size: clamp(2.8rem, 3vw, 3.6rem);
   font-weight: 700;
