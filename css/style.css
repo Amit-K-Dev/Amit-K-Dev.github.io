@@ -637,6 +637,18 @@ body.nav-open {
   opacity: 0.8;
 }
 
+.project-impact {
+  list-style: none;
+  margin-top: var(--space-md);
+  padding: 0;
+}
+
+.project-impact li {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  opacity: 0.9;
+}
+
 .project-stack {
   font-size: 1.3rem;
   letter-spacing: 0.5px;
@@ -778,7 +790,7 @@ textarea:focus {
 .impact-card:hover,
 .contact-info:hover,
 .contact-form-wrapper:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 
 /* ===================================== */
@@ -1254,6 +1266,19 @@ textarea:focus {
   text-align: center;
 }
 
+.query-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.query-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+}
+
 .code-block {
   background: #0b1220;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1262,8 +1287,6 @@ textarea:focus {
   margin-top: 4rem;
   overflow-x: auto;
   text-align: left;
-
-  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.25);
 }
 
 .code-block code {
@@ -1273,6 +1296,13 @@ textarea:focus {
   display: block;
   white-space: pre;
   line-height: 1.6;
+  border: none;
+}
+
+.query-card h3 {
+  font-size: var(--fs-md);
+  margin-bottom: 1.4rem;
+  color: var(--color-primary);
 }
 
 .code-wrapper {
@@ -1291,6 +1321,77 @@ textarea:focus {
   padding: 0.5rem 1rem;
   border-radius: 0.6rem;
   cursor: pointer;
+}
+
+.query-description {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: var(--space-md);
+  opacity: 0.85;
+}
+
+/* ======== SQL OPTIMIZATION ======= */
+.optimization-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.optimization-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2.6rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.optimization-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.25);
+}
+
+.optimization-card h3 {
+  font-size: var(--fs-md);
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.optimization-card p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* ======== BUSINESS RECOMMENDATIONS ========= */
+.recommendation-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.recommendation-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2.6rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.recommendation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.25);
+}
+
+.recommendation-card h3 {
+  font-size: var(--fs-md);
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.recommendation-card p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.85;
 }
 
 /* ======== KEY INSIGHTS ========= */
@@ -1316,6 +1417,15 @@ textarea:focus {
 .insight-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.25);
+}
+
+.insight-number {
+  display: block;
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary);
+  letter-spacing: 0.05rem;
 }
 
 .insight-card h3 {
@@ -1468,27 +1578,6 @@ textarea:focus {
 }
 
 /* ============================================== */
-/* ============== SKILLS HIGHLIGHT ============== */
-/* ============================================== */
-
-.skills-highlight {
-  margin-top: 4rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.2rem;
-}
-
-.skill-pill {
-  padding: 0.8rem 1.6rem;
-  border-radius: 5rem;
-  background: rgba(56, 189, 248, 0.15);
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  font-size: 1.4rem;
-  color: var(--color-primary);
-}
-
-/* ============================================== */
 /* ============ PROJECT RESOURCES =============== */
 /* ============================================== */
 
@@ -1529,6 +1618,10 @@ textarea:focus {
   font-size: 1.5rem;
   line-height: 1.6;
   opacity: 0.85;
+}
+
+.resource-card .btn-secondary {
+  margin-top: var(--space-md);
 }
 
 /* ============================================== */
