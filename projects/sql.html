@@ -24,15 +24,53 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-  <script defer src="js/script.js"></script>
+  <script defer src="../js/sql.js"></script>
 
 </head>
 
 <body class="project-page">
 
+  <!-- =========================================== -->
+  <!-- ================== HEADER ================= -->
+  <!-- =========================================== -->
+
+  <header class="header">
+    <div class="container header-container">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        AK
+      </a>
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#database-structure">Database Structure</a></li>
+          <li><a class="nav-link" href="#sql-techniques">SQL Techniques</a></li>
+          <li><a class="nav-link" href="#key-insights">Key Insights</a></li>
+          <li><a class="nav-link" href="#analysis-results">Analysis Results</a></li>
+          <li><a class="nav-link" href="#business-impact">Business Impact</a></li>
+
+        </ul>
+      </nav>
+
+      <div class="nav-overlay"></div>
+
+      <!-- Mobile Button -->
+      <button class="btn-mobile-nav" aria-label="Toggle navigation">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav close-icon" name="close-outline"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
   <main>
 
-    <!-- ================= PROJECT HERO ================= -->
+    <!-- =========================================== -->
+    <!-- ============== PROJECT HERO =============== -->
+    <!-- =========================================== -->
+
     <section class="project-hero">
       <div class="container project-hero-grid">
 
@@ -44,13 +82,28 @@
           </h1>
 
           <p class="project-hero-subtitle">
-            Revenue trend and customer segmentation analysis using advanced SQL queries.
+            Analyzed transactional sales data using SQL to identify top-performing products, high-value, customers, and
+            revenue concentration patterns.
           </p>
+
+          <!-- ============== BADGES =============== -->
+          <div class="project-meta-badges">
+
+            <span class="badge difficulty-intermediate">
+              Intermediate
+            </span>
+
+            <span class="badge badge-sql">
+              SQL Analysis
+            </span>
+
+          </div>
 
           <div class="project-meta">
             <span><strong>Role:</strong> Date Analyst</span>
             <span><strong>Tools:</strong> SQL</span>
-            <span><strong>Dataset:</strong> 50,000+ Sales Records</span>
+            <span><strong>Dataset:</strong>Sales Transactions</span>
+            <span><strong>Records:</strong> 50,000+</span>
           </div>
 
           <div class="project-actions">
@@ -67,131 +120,146 @@
       </div>
     </section>
 
-    <div class="section-divider"></div>
+    <!-- =========================================== -->
+    <!-- ============ PROJECT OVERVIEW ============= -->
+    <!-- =========================================== -->
 
-    <!-- =============== BUSINESS PROBLEM =============== -->
-    <section class="section">
+    <section class="section project-overview" id="project-overview">
       <div class="container">
 
         <h2 class="section-title">
-          Business Problems
+          Project Overview
         </h2>
 
         <p class="section-text">
-          The company lacked visibility into revenue performance, customer contribution, and seasonal sales behavior.
-          Leadership required structured analysis to identify growth opportunities and optimize strategic decisions.
+          The goal of this project was to analyze a relational sales dataset to uncover revenue drivers, customer
+          purchasing behavior, and product performance.
+
+          Using SQL joins, aggregations, and window functions, the analysis identifies high-value customers,
+          top-performing products, and revenue concentration patterns.
         </p>
 
       </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- =============== DATASET OVERVIEW =============== -->
-    <section class="section case-split-section">
-      <div class="container">
-
-        <div class="case-split-grid">
-
-
-          <div class="case-block">
-            <h2 class="section-title">
-              Dataset Overview
-            </h2>
-
-            <ul class="case-list">
-              <li>50,000+ transactional records</li>
-              <li>Customer ID, Order Date, Revenue, Product Category</li>
-              <li>2-year time span</li>
-              <li>Multiple product segments</li>
-            </ul>
-          </div>
-
-          <!-- =============== ANALYSIS APPROACH =============== -->
-          <div class="case-block">
-            <h2 class="section-title">
-              Analysis Approach
-            </h2>
-
-            <ul class="case-list">
-              <li>Used GROUP BY and aggregations</li>
-              <li>Applied window functions for rankings</li>
-              <li>Performed customer segmentation analysis</li>
-              <li>Indentified seasonal trends</li>
-            </ul>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
 
     <div class="section-divider"></div>
 
-    <!-- ============= SQL QUERY EXAMPLE ============= -->
-    <section class="section">
+    <!-- =========================================== -->
+    <!-- ============ DATABASE SCHEMA ============= -->
+    <!-- =========================================== -->
+
+    <section class="section schema-section" id="database-structure">
       <div class="container">
 
         <h2 class="section-title">
-          SQL Query Example
+          Database Structure
         </h2>
 
-        <div class="code-block">
+        <p class="section-intro">
+          The sales dataset is organized into four relational tables. These tables capture customer information, order
+          transactions, product catalog data, and individual order line items.
+        </p>
 
-          <pre><code>
-          SELECT
-              product_category,
-              SUM(revenue) AS total_revenue,
-              RANK() OVER (ORDER BY SUM(revenue) DESC) AS revenue_rank
-          FROM sales_data
-          GROUP BY product_category;
-          </code></pre>
+        <div class="schema-card">
+
+          <img src="../assets/images/sql/sales-database-schema.png" alt="Sales Database Schema" class="schema-image">
 
         </div>
 
-      </div>
-    </section>
+        <div class="schema-details">
 
-    <div class="section-divider"></div>
+          <div class="schema-table">
 
-    <!-- =========== KEY BUSINESS INSIGHTS ========== -->
-    <section class="section result-section">
-      <div class="container">
-
-        <h2 class="section-title">
-          Analysis Results
-        </h2>
-
-        <div class="results-grid">
-
-          <div class="result-card">
-            <img src="../assets/images/sql-project.png" alt="Revenue by Category Chart">
             <h3>
-              Revenue by Product Category
+              Customers
+            </h3>
+
+            <p>
+              Contains transaction-level data including order dates and customer relationships.
+            </p>
+
+          </div>
+
+          <div class="schema-table">
+
+            <h3>
+              Order Details
+            </h3>
+
+            <p>
+              Capture individual line items within each order including product references and quantity purchased.
+            </p>
+
+          </div>
+
+          <div class="schema-table">
+
+            <h3>
+              Products
+            </h3>
+
+            <p>
+              Maintains product catalog data including category, cost price, and selling price.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ============================================ -->
+    <!-- ==== ANALYSIS WORKFLOW (SQL TECHNIQUES) ==== -->
+    <!-- ============================================ -->
+
+    <section class="section techniques-section" id="sql-techniques">
+      <div class="container">
+
+        <h2 class="section-title">
+          SQL Techniques Used
+        </h2>
+
+        <div class="techniques-grid">
+
+          <div class="technique-card">
+            <h3>
+              Joins
             </h3>
             <p>
-              Revenue analysis reveals that a small number of product categories generate the majority of total sales.
+              Connected<code>orders</code>, <code>customers</code>, and <code>products</code> tables to reconstruct
+              complete sales transactions.
             </p>
           </div>
 
-          <div class="result-card">
-            <img src="../assets/images/sql-project.png" alt="Customer Segmentation Chart">
+          <div class="technique-card">
+            <h3>
+              Aggregations
+            </h3>
+            <p>
+              Used <code>SUM</code> and <code>COUNT</code> to calculate revenue, order frequency, and customer metrics.
+            </p>
+          </div>
+
+          <div class="technique-card">
+            <h3>
+              Window Functions
+            </h3>
+            <p>
+              Applied <code>RANK()</code> and <code>NTILE()</code> to analyze product performance and revenue
+              distribution.
+            </p>
+          </div>
+
+          <div class="technique-card">
             <h3>
               Customer Segmentation
             </h3>
             <p>
-              Repeat customers show significantly higher lifetime value, indicating strong potential for retention
-              strategies.
-            </p>
-          </div>
-
-          <div class="result-card">
-            <img src="../assets/images/sql-project.png" alt="Seasonal Sales Trends">
-            <h3>
-              Seasonal Sales Trends
-            </h3>
-            <p>
-              Monthly sales analysis highlights seasonal peaks that could guide marketing and inventory planning.
+              Identified high-value customers using Customer Lifetime Value (CLV) calculations.
             </p>
           </div>
 
@@ -202,53 +270,94 @@
 
     <div class="section-divider"></div>
 
-    <!-- =========== KEY BUSINESS INSIGHTS ========== -->
-    <section class="section">
+    <!-- =========================================== -->
+    <!-- ============== SQL QUERIES ================ -->
+    <!-- =========================================== -->
+
+    <section class="section sql-section" id="sql-query">
       <div class="container">
 
         <h2 class="section-title">
-          Key Business Insights
+          Example SQL Query
+        </h2>
+
+        <div class="code-wrapper">
+
+          <button class="copy-btn">Copy SQL</button>
+
+          <pre class="code-block"><code>
+SELECT
+    p.product_name,
+    SUM(od.quantity * p.selling_price) AS revenue,
+    RANK() OVER (
+        ORDER BY SUM(od.quantity * p.selling_price) DESC
+    ) AS revenue_rank
+FROM order_details od
+JOIN products p
+ON od.product_id = p.product_id
+GROUP BY p.product_name;
+        </code></pre>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =========================================== -->
+    <!-- ============== KEY INSIGHTS =============== -->
+    <!-- =========================================== -->
+
+    <section class="section insights-section" id="key-insights">
+      <div class="container">
+
+        <h2 class="section-title">
+          Key Insights
         </h2>
 
         <div class="insights-grid">
 
           <div class="insight-card">
             <h3>
+              Total Revenue
+            </h3>
+            <p>
+              Total revenue across all transactions reached
+              <strong>$10.36M</strong>.
+            </p>
+          </div>
+
+          <div class="insight-card">
+            <h3>
+              Top Product
+            </h3>
+            <p>
+              Laptop Pro 15 generated the highest revenue with over
+              <strong>$5.1M</strong>.
+            </p>
+          </div>
+
+          <div class="insight-card">
+            <h3>
+              Customer Value
+            </h3>
+            <p>
+              Top customers generated over
+              <strong>$800K</strong>
+              in lifetime revenue.
+            </p>
+          </div>
+
+          <div class="insight-card">
+            <h3>
               Revenue Concentration
             </h3>
             <p>
-              The top 20% of profit category generated over 60% of total revenue, indicating a strong revenue
-              concentration among high-performance the segments.
-            </p>
-          </div>
-
-          <div class="insight-card">
-            <h3>
-              High-Value Customers
-            </h3>
-            <p>
-              Window function analysis revealed that a small group of repeat customers contributed disproportionately to
-              total sales, highlighting the importance of retention strategies.
-            </p>
-          </div>
-
-          <div class="insight-card">
-            <h3>
-              Seasonal Trends
-            </h3>
-            <p>
-              Sales showed clear spikes during certain months, suggesting seasonal demand patterns that could guide
-              inventory and marketing planning.
-            </p>
-          </div>
-
-          <div class="insight-card">
-            <h3>
-              Customer Segmentation
-            </h3>
-            <p>
-              Segmenting customers by purchase frequency identified a loyal customer group with significantly higher
-              lifetime value.
+              Top 10% of customers contributed
+              <strong>$1.68M</strong>
+              in total revenue.
             </p>
           </div>
 
@@ -257,71 +366,167 @@
       </div>
     </section>
 
+
     <div class="section-divider"></div>
 
-    <!-- =========== BUSINESS IMPACT SUMMARY ========== -->
-    <section class="section impact-summary-section">
+    <!-- =========================================== -->
+    <!-- ========= VISUALIZATION RESULTS =========== -->
+    <!-- =========================================== -->
+
+    <section class="section visualization-section" id="analysis-results">
+      <div class="container">
+
+        <h2 class="section-title">
+          Analysis Results
+        </h2>
+
+        <div class="visualization-grid">
+
+          <div class="viz-card">
+
+            <img src="../assets/images/sql/product-revenue-ranking.png" alt="Product Revenue Ranking">
+
+            <p>
+              Revenue ranking of products calculated using SQL window functions.
+            </p>
+          </div>
+
+          <div class="viz-card">
+            <img src="../assets/images/sql/customer-orders.png" alt="Customer Order Frequency">
+
+            <p>
+              Customer purchase frequency showing repeat buyers.
+            </p>
+          </div>
+
+          <div class="viz-card">
+
+            <img src="../assets/images/sql/customer-lifetime-value.png" alt="Customer Lifetime Value">
+
+            <p>
+              Customer lifetime value (CLV) calculated from aggregated revenue.
+            </p>
+          </div>
+
+          <div class="viz-card">
+
+            <img src="../assets/images/sql/top-customer-contribution.png" alt="Revenue Contribution">
+
+            <p>
+              Pareto analysis showing top 10% customers revenue contribution.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <div class="section-divider"></div>
+    <!-- =========================================== -->
+    <!-- ============ SKILLS HIGHLIGHT ============= -->
+    <!-- =========================================== -->
+
+    <section class="section skills-highlight-section" id="skills-demonstrated">
+      <div class="container">
+
+        <h2 class="section-title">
+          Skills Demonstrated
+        </h2>
+
+        <div class="skills-highlight">
+
+          <span class="skill-pill">SQL Aggregations</span>
+          <span class="skill-pill">Window Functions</span>
+          <span class="skill-pill">Data Cleaning</span>
+          <span class="skill-pill">Customer Segmentation</span>
+          <span class="skill-pill">Revenue Analysis</span>
+          <span class="skill-pill">Business Insights</span>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =========================================== -->
+    <!-- ============ BUSINESS IMPACT ============== -->
+    <!-- =========================================== -->
+
+    <section class="section impact-summary-section" id="business-impact">
       <div class="container">
 
         <h2 class="section-title">
           Business Impact
         </h2>
-        <P class="impact-intro">
-          The analysis highlights several opportunities for improving revenue performance and customer retention
-          strategies.
-        </P>
+
+        <!-- ========= BUSINESS VALUE BADGE ========= -->
+        <p>
+          <span class="impact-summary-badge">
+            Potential Business Value
+          </span>
+        </p>
 
         <div class="impact-summary-grid">
 
           <div class="impact-summary-card">
             <h3>
-              Revenue Optimization
+              Revenue Drivers
             </h3>
             <p>
-              Indentifying top-performing product categories allow bussiness to focus marketing and inventory strategies
-              on the segments that drive the majority of revenue.
+              Identified top-performing products contributing the majority of revenue, enabling businesses to prioritize
+              inventory and marketing strategies around high-performance items.
             </p>
           </div>
 
           <div class="impact-summary-card">
             <h3>
-              Customer Retention
+              High Value Customers
             </h3>
             <p>
-              Analysis of repeat purchase behavior rveals high-value customer segments that could benefit from loyalty
-              programs and personalized marketing.
+              Customer lifetime value analysis highlights high-value customers that could benefit from loyalty programs
+              and targeted retention campaigns.
             </p>
           </div>
 
           <div class="impact-summary-card">
             <h3>
-              Seasonal planning
+              Sales Concentration
             </h3>
             <p>
-              Recognizing seasonal sales patterns enables better demand forecasting, inventory planning, and promotional
-              timing.
+              Pareto analysis revealed that a small group of customers generate a large share of revenue, emphasizing
+              the importance of customer segmentation strategies.
             </p>
           </div>
 
           <div class="impact-summary-card">
             <h3>
-              Strategic Decision Support
+              Data Driven Decisions
             </h3>
             <p>
-              The insights derived from SQL analysis provide a data-driven foundation for strategic decisions related to
-              product strategy and customer growth.
+              The insights derived from SQL analysis provide a foundation for improving product strategy, pricing, and
+              customer engagement.
             </p>
           </div>
+
 
         </div>
 
       </div>
+
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- =========== PROJECT LEARNING ========== -->
-    <section class="section learning-section">
+
+
+    <!-- =========================================== -->
+    <!-- ============= PROJECT LEARNING ============ -->
+    <!-- =========================================== -->
+
+    <section class="section learning-section" id="what-i-learned">
       <div class="container">
 
         <h2 class="section-title">
@@ -362,10 +567,69 @@
 
         </div>
 
-        <div style="margin-top: 4rem;">
-          <a href="../index.html#projects" class="btn">
-            Back to Projects
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =========================================== -->
+    <!-- =========== PROJECT RESOURCES ============= -->
+    <!-- =========================================== -->
+
+    <section class="section resources-section" id="project-resources">
+      <div class="container">
+
+        <h2 class="section-title">
+          Project Resources
+        </h2>
+
+        <div class="resources-grid">
+
+          <a href="https://github.com/Amit-K-Dev/SQL-Business-Insights-Project" target="_blank" class="resource-card">
+
+            <ion-icon name="logo-github"></ion-icon>
+
+            <h3>
+              View GitHub Repository
+            </h3>
+
+            <p>
+              Explore the complete SQL project including database schema, data inserts, and analytical
+              queries.
+            </p>
+
           </a>
+
+          <a href="https://github.com/Amit-K-Dev/SQL-Business-Insights-Project/blob/main/3_business_queries.sql"
+            target="_blank" class="resource-card">
+
+            <ion-icon name="download-outline"></ion-icon>
+
+            <h3>
+              SQL Query Scripts
+            </h3>
+
+            <p>
+              Access the SQL scripts used for revenue analysis to reproduce, customer segmentation, and window function
+              queries.
+            </p>
+
+          </a>
+
+          <a href="../index.html#projects" class="resource-card">
+
+            <ion-icon name="grid-outline"></ion-icon>
+
+            <h3>
+              Back to Portfolia
+            </h3>
+
+            <p>
+              Return to the main portfolio to explore additional analytics and dashboard projects.
+            </p>
+
+          </a>
+
         </div>
 
       </div>
@@ -406,7 +670,71 @@
   <!-- =========================================== -->
   <!-- ================== FOOTER ================= -->
   <!-- =========================================== -->
-  <footer>
+
+  <footer class="footer">
+
+    <div class="container footer-container">
+
+      <!-- Left Column -->
+      <div class="footer-brand">
+
+        <div class="profile-img">
+          <a href="../index.html" class="footer-logo">
+            <img src="../assets/images/logo.png" alt="Amit Kumar">
+          </a>
+        </div>
+
+        <p class="footer-tagline">
+          Turning data into actionable business insights.
+        </p>
+
+        <ul class="social-links">
+
+          <li>
+            <a class="footer-link" href="https://www.linkedin.com/in/amit-k-dev/" target="_blank"
+              rel="noopener noreferrer" aria-label="LinkedIn">
+              <ion-icon class="social-icon" name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a class="footer-link" href="https://github.com/Amit-K-Dev" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub">
+              <ion-icon class="social-icon" name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a class="footer-link" href="https://x.com/AmitKumarDev_" target="_blank" rel="noopener noreferrer"
+              aria-label="Twitter / X">
+              <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- Right Column -->
+      <div class="footer-nav">
+        <h4>Quick Links</h4>
+
+        <ul class="footer-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
@@ -419,6 +747,10 @@
     </div>
 
   </footer>
+
+  <button class="btn-top" aria-label="Back to top">
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </button>
 
 </body>
 
