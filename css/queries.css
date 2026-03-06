@@ -17,7 +17,9 @@
   .insights-grid,
   .impact-grid,
   .workflow-grid,
-  .techniques-grid {
+  .techniques-grid,
+  .optimization-grid,
+  .recommendation-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -94,7 +96,8 @@
   }
 
   .skills-grid,
-  .schema-details {
+  .schema-details,
+  .query-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
