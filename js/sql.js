@@ -74,7 +74,7 @@ if (copyBtn) {
     copyBtn.innerText = "Copied!";
 
     setTimeout(() => {
-      copyBtn.innerText = "Copy SQL";
+      copyBtn.innerHTML = `<ion-icon name="clipboard-outline"></ion-icon> Copy SQL`;
     }, 2000);
   });
 }
