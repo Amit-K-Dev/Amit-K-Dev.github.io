@@ -11,7 +11,6 @@
   display: flex;
   align-items: center;
 
-  /* background: rgba(2, 6, 23, 0.6); */
   background: transparent;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -525,7 +524,7 @@ body.nav-open {
 }
 
 /* ===================================== */
-/* ============= IMPACT ================ */
+/* ============= KEY IMPACT ================ */
 /* ===================================== */
 
 .impact-section {
@@ -1034,6 +1033,14 @@ textarea:focus {
 }
 
 /* ================================== */
+/* ========= DARK SECTION =========== */
+/* ================================== */
+
+.dark-section {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ================================== */
 /* ========= PROJECT PAGE =========== */
 /* ================================== */
 
@@ -1092,13 +1099,32 @@ textarea:focus {
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
 }
 
+.project-meta-badges,
 .project-meta {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 1rem;
   margin: 2rem 0 2rem 0;
+  flex-wrap: wrap;
   opacity: 0.85;
+}
+
+.badge {
+  padding: 0.5rem 1.2rem;
+  border-radius: 5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.difficulty-intermediate {
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  color: var(--color-primary);
+}
+
+.badge-sql {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
 }
 
 .project-actions {
@@ -1106,6 +1132,288 @@ textarea:focus {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+}
+
+/* ======== PROJECT OVERVIEW ========= */
+.project-overview {
+  text-align: center;
+}
+
+.project-overview .container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.project-overview .section-text {
+  max-width: 70rem;
+  margin: 0 auto;
+  font-size: var(--fs-base);
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.project-overview .section-text strong {
+  color: var(--color-primary);
+}
+
+/* ======== DATABASE SCHEMA ========= */
+.schema-section {
+  text-align: center;
+}
+
+.schema-intro {
+  max-width: 70rem;
+  margin: 0 auto 4rem auto;
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  opacity: 0.85;
+  text-align: center;
+}
+
+.schema-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  margin-bottom: 4rem;
+}
+
+.schema-image {
+  width: 100%;
+  max-width: 80rem;
+  display: block;
+  margin: auto;
+  border-radius: var(--radius-md);
+}
+
+.schema-details {
+  display: grid;
+  gap: 3rem;
+}
+
+.schema-table {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+}
+
+.schema-table h3 {
+  font-size: var(--fs-md);
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.schema-table p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* ======== ANALYSIS WORKFLOW (SQL TECHNIQUES) ========= */
+.techniques-section {
+  text-align: center;
+}
+
+.techniques-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.technique-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2.6rem;
+  text-align: left;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.technique-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.25);
+}
+
+.technique-card h3 {
+  font-size: var(--fs-md);
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.technique-card p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* ======== SQL QUERIES ========= */
+.sql-section {
+  text-align: center;
+}
+
+.code-block {
+  background: #0b1220;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-top: 4rem;
+  overflow-x: auto;
+  text-align: left;
+
+  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.25);
+}
+
+.code-block code {
+  font-family: "Cascadia Code", monospace;
+  font-size: 1.3rem;
+  color: #e2e8f0;
+  display: block;
+  white-space: pre;
+  line-height: 1.6;
+}
+
+.code-wrapper {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+/* ======== KEY INSIGHTS ========= */
+.insights-section {
+  text-align: center;
+}
+
+.insights-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.insight-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2.6rem;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.insight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.25);
+}
+
+.insight-card h3 {
+  font-size: var(--fs-md);
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.insight-card p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.insight-card strong {
+  color: var(--color-primary);
+}
+
+/* ======== VISUALIZATION RESULTS ========= */
+.visualization-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.viz-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.viz-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.25);
+}
+
+.viz-card img {
+  width: 100%;
+  border-radius: 0.8rem;
+  margin-bottom: var(--space-sm);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.viz-card p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* ======== BUSINESS IMPACT ========= */
+.impact-summary-section {
+  text-align: center;
+}
+
+.impact-summary-badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  padding: 0.6rem 1.4rem;
+  border-radius: 5rem;
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.impact-summary-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.impact-summary-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2.6rem;
+  text-align: left;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.impact-summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.25);
+}
+
+.impact-summary-card h3 {
+  font-size: var(--fs-md);
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.impact-summary-card p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.85;
 }
 
 /* ========= METRICS CARDS =========== */
@@ -1128,77 +1436,7 @@ textarea:focus {
   margin-bottom: 1rem;
 }
 
-/* ========== CASE SPLIT GRID LAYOUT ============ */
-.case-split-grid {
-  display: grid;
-  gap: 6rem;
-}
 
-/* ========= CASE STUDY CONTENT BLOCK =========== */
-.case-list {
-  list-style: none;
-  max-width: 70rem;
-  margin: 4rem auto 0;
-
-  display: grid;
-  gap: 1.8rem;
-
-}
-
-.case-list li {
-  position: relative;
-  padding: 1.6rem 2rem 1.6rem 4rem;
-
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: var(--radius-md);
-
-  border-left: 3px solid var(--color-primary);
-
-  line-height: 1.6;
-  font-size: var(--fs-base);
-  text-align: left;
-
-  transition: transform 0.25s ease, background 0.25s ease;
-}
-
-.case-list li::before {
-  content: "•";
-  position: absolute;
-  left: 1.6rem;
-  top: 50%;
-  transform: translateY(-50%);
-
-  font-size: 2rem;
-  color: var(--color-primary);
-}
-
-.case-list li:hover {
-  transform: translateX(6px);
-  background: rgba(255, 255, 255, 0.06);
-}
-
-/* ============================================== */
-/* ========= CASE STUDY CONTENT BLOCK =========== */
-/* ============================================== */
-
-/* ========= CODE BLOCK =========== */
-.code-block {
-  margin-top: 4rem;
-  background: #0b1220;
-  border-radius: var(--radius-lg);
-  padding: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.code-block pre {
-  margin: 0;
-}
-
-.code-block code {
-  font-family: "Cascadia Code", monospace;
-  font-size: 1.4rem;
-  color: var(--color-primary);
-  line-height: 1.6;
-}
 
 /* ============================================== */
 /* ============= PROJECT LEARNING =============== */
@@ -1230,122 +1468,67 @@ textarea:focus {
 }
 
 /* ============================================== */
-/* ========= ANALYSIS RESULTS SECTION =========== */
+/* ============== SKILLS HIGHLIGHT ============== */
 /* ============================================== */
 
-.results-grid {
+.skills-highlight {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.skill-pill {
+  padding: 0.8rem 1.6rem;
+  border-radius: 5rem;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  font-size: 1.4rem;
+  color: var(--color-primary);
+}
+
+/* ============================================== */
+/* ============ PROJECT RESOURCES =============== */
+/* ============================================== */
+
+.resources-grid {
   display: grid;
   gap: 3rem;
   margin-top: 4rem;
 }
 
-.result-card {
-  background: rgba(255, 255, 255, 0.05);
+.resource-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2.6rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.result-card:hover {
-  transform: translateY(-6px);
+.resource-card:hover {
+  transform: translateY(-4px);
   box-shadow: 0 1rem 2rem rgba(56, 189, 248, 0.25);
 }
 
-.result-card img {
-  width: 100%;
-  display: block;
-}
-
-.result-card h3 {
-  padding: 1.8rem 2rem 0;
+.resource-card ion-icon {
+  font-size: var(--fs-lg);
   color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
-.result-card p {
-  padding: 0 2rem 2rem;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-/* ============================================== */
-/* ========== KEY BUSINESS INSIGHTS ============= */
-/* ============================================== */
-
-.insights-grid {
-  display: grid;
-  gap: 3rem;
-  margin-top: 4rem;
-}
-
-.insight-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2.8rem;
-  border-radius: var(--radius-lg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.insight-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 1rem 2.5rem rgba(56, 189, 248, 0.25);
-}
-
-.insight-card h3 {
+.resource-card h3 {
+  font-size: var(--fs-md);
   margin-bottom: 1rem;
   color: var(--color-primary);
-  font-size: 1.9rem;
 }
 
-.insight-card p {
+.resource-card p {
   font-size: 1.5rem;
   line-height: 1.6;
-  opacity: 0.9;
-}
-
-/* ============================================== */
-/* ========= BUSINESS IMPACT SUMMARY ============ */
-/* ============================================== */
-.impact-summary-section {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.impact-intro {
-  max-width: 70rem;
-  margin: 2rem auto 4rem;
-  font-size: 1.7rem;
-  opacity: 0.9;
-}
-
-.impact-summary-grid {
-  display: grid;
-  gap: 3rem;
-}
-
-.impact-summary-card {
-  background: rgba(255, 255, 255, 0.04);
-  padding: 3rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.impact-summary-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 1rem 2rem rgba(56, 189, 248, 0.25);
-}
-
-.impact-summary-card h3 {
-  color: var(--color-primary);
-  margin-bottom: 1rem;
-  font-size: 1.9rem;
-}
-
-.impact-summary-card p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 /* ============================================== */
