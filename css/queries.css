@@ -19,7 +19,8 @@
   .workflow-grid,
   .techniques-grid,
   .optimization-grid,
-  .recommendation-grid {
+  .recommendation-grid,
+  .impact-summary-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -58,11 +59,16 @@
 
   /* ======== SQL TECHNIQUES ========= */
   .code-block {
-    padding: 3rem;
+    padding: 2rem;
   }
 
   .code-block code {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    min-width: 52rem;
+  }
+
+  .copy-btn {
+    font-size: 1.2rem;
   }
 }
 
@@ -96,8 +102,7 @@
   }
 
   .skills-grid,
-  .schema-details,
-  .query-grid {
+  .schema-details {
     grid-template-columns: repeat(2, 1fr);
   }
 
