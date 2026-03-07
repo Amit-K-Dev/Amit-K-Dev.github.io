@@ -62,22 +62,22 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Code Block
-const copyBtn = document.querySelector(".copy-btn");
+// Copy SQL Code Buttons
+const copyButtons = document.querySelectorAll(".copy-btn");
 
-if (copyBtn) {
-  copyBtn.addEventListener("click", () => {
-    const code = document.querySelector(".code-block code").innerText;
+copyButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const code = btn.parentElement.querySelector("code").innerText;
 
     navigator.clipboard.writeText(code);
 
-    copyBtn.innerText = "Copied!";
+    btn.innerHTML = "Copied!";
 
     setTimeout(() => {
-      copyBtn.innerHTML = `<ion-icon name="clipboard-outline"></ion-icon> Copy SQL`;
-    }, 2000);
+      btn.innerHTML = `<ion-icon name="clipboard-outline"></ion-icon> Copy SQL`;
+    }, 1500);
   });
-}
+});
 
 /* ===================================== */
 /* ===== FOOTER REAVEAL OBSERVER ======= */
