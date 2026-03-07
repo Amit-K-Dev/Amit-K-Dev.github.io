@@ -68,7 +68,6 @@ html {
 html,
 body {
   height: auto;
-  /* overflow-x: hidden; */
 }
 
 body {
@@ -151,9 +150,9 @@ h4 {
 }
 
 code {
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: "Cascadia Code", monospace !important;
+  font-size: 1.2rem;
   border-radius: var(--radius-sm);
-  padding: 0.5rem;
 }
 
 .section-title {
