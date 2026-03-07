@@ -48,13 +48,13 @@
   }
 
   /* ======== DATABASE SCHEMA ========= */
-  .schema-details {
+  .schema-details,
+  .visualization-grid {
     grid-template-columns: 1fr;
   }
 
-  /* ==== VISUALIZATION RESULTS ==== */
-  .visualization-grid {
-    grid-template-columns: 1fr;
+  .featured-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   /* ======== SQL TECHNIQUES ========= */
@@ -64,7 +64,6 @@
 
   .code-block code {
     font-size: 1.3rem;
-    min-width: 52rem;
   }
 
   .copy-btn {
