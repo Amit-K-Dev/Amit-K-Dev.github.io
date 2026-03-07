@@ -709,8 +709,6 @@ body.nav-open {
   justify-content: center;
 
   flex-wrap: wrap;
-  /* flex-direction: column;
-  align-items: center; */
 }
 
 .contact-link {
@@ -1276,26 +1274,33 @@ textarea:focus {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  padding: var(--space-md);
+  padding: 3rem;
+}
+
+.query-card:hover {
+  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.2);
 }
 
 .code-block {
   background: #0b1220;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  padding: 2rem;
-  margin-top: 4rem;
+  padding: 1.6rem;
+  margin-top: 1.6rem;
   overflow-x: auto;
+  max-width: 100%;
   text-align: left;
+  scrollbar-width: thin;
 }
 
 .code-block code {
   font-family: "Cascadia Code", monospace;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #e2e8f0;
   display: block;
   white-space: pre;
   line-height: 1.6;
+  min-width: 48rem;
   border: none;
 }
 
@@ -1307,27 +1312,45 @@ textarea:focus {
 
 .code-wrapper {
   position: relative;
-  margin-top: 4rem;
+  margin-top: 1.6rem;
+}
+
+.code-header {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .copy-btn {
   position: absolute;
-  top: 1.2rem;
-  right: 1.2rem;
-  background: rgba(56, 189, 248, 0.15);
+  top: var(--space-xs);
+  right: var(--space-xs);
+  background: rgba(56, 189, 248, 0.12);
   border: 1px solid rgba(56, 189, 248, 0.4);
   color: var(--color-primary);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0.5rem 1rem;
   border-radius: 0.6rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.copy-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
 }
 
 .query-description {
   text-align: center;
-  font-size: 1.5rem;
-  margin-top: var(--space-md);
-  opacity: 0.85;
+  font-size: 1.4rem;
+  margin-top: var(--space-sm);
+  opacity: 0.8;
 }
 
 /* ======== SQL OPTIMIZATION ======= */
@@ -1546,12 +1569,11 @@ textarea:focus {
   margin-bottom: 1rem;
 }
 
-
-
 /* ============================================== */
 /* ============= PROJECT LEARNING =============== */
 /* ============================================== */
 
+/* ============= KEY TAKEAWAYS =============== */
 .learning-grid {
   display: grid;
   gap: 3rem;
@@ -1563,12 +1585,40 @@ textarea:focus {
   padding: 2.6rem;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.05);
+
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.learning-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 1rem 2rem rgba(56, 189, 248, 0.15),
+    0 0 0 1px rgba(0, 0, 0, 0.25);
 }
 
 .learning-item h3 {
   color: var(--color-primary);
   margin-bottom: 1rem;
   font-size: 1.8rem;
+}
+
+.learning-item__icon {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+
+  margin: 0 auto 1.6rem auto;
+}
+
+.learning-item__icon ion-icon {
+  font-size: 2.2rem;
+  color: var(--color-primary);
 }
 
 .learning-item p {
