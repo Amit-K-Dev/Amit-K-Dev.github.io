@@ -1266,20 +1266,20 @@ textarea:focus {
 
 .query-grid {
   display: grid;
-  gap: 3rem;
+  gap: 4rem;
   margin-top: 4rem;
 }
 
-.query-card {
+/* .query-card {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   padding: 3rem;
-}
+} */
 
-.query-card:hover {
+/* .query-card:hover {
   box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.2);
-}
+} */
 
 .code-block {
   background: #0b1220;
