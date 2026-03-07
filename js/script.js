@@ -71,6 +71,22 @@ navLinks.forEach((link) => {
 });
 
 /* ===================================== */
+/* ===== SMOOTH NAVIGATION SCROLL ====== */
+/* ===================================== */
+
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const id = this.getAttribute("href");
+
+    document.querySelector(id).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
+/* ===================================== */
 /* ===== ACTIVE NAV LINK ON SCROLL ===== */
 /* ===================================== */
 
@@ -81,10 +97,13 @@ window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
+    const sectionTop = section.offsetTop - 120;
+    const sectionHeight = section.offsetHeight;
 
-    if (window.scrollY >= sectionTop - 120) {
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
+    ) {
       current = section.getAttribute("id");
     }
   });
@@ -92,7 +111,7 @@ window.addEventListener("scroll", () => {
   navLinksAll.forEach((link) => {
     link.classList.remove("active");
 
-    if (link.getAttribute("href").includes(current)) {
+    if (link.getAttribute("href") === "#" + current) {
       link.classList.add("active");
     }
   });
