@@ -4,13 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="SQL Business Insights project by Amit Kumar showcasing revenue trend analysis and customer segmentation using advanced SQL.">
 
   <title>SQL Business Insights | Amit Kumar</title>
+  <meta name="description"
+    content="SQL Business Insights project by Amit Kumar showcasing revenue trend analysis and customer segmentation using advanced SQL.">
+  <meta name="author" content="Amit Kumar">
+
+  <meta property="og:title" content="SQL Business Insights | Amit Kumar">
+  <meta property="og:description"
+    content="SQL Business Insights project by Amit Kumar showcasing revenue trend analysis and customer segmentation using advanced SQL.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amit-data.vercel.app">
 
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
-  <link rel="apple-touch-icon" href="../assets/images/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
 
   <link rel="stylesheet" href="../css/general.css">
   <link rel="stylesheet" href="../css/style.css">
@@ -18,12 +28,14 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+
   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
   <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
   <script defer src="../js/sql.js"></script>
 
 </head>
@@ -302,7 +314,7 @@
 
               <button class="copy-btn"><ion-icon name="clipboard-outline"></ion-icon> Copy SQL</button>
 
-              <pre class="code-block"><code>
+              <pre class="code-block"><code class="language-sql">
 SELECT
     SUM(od.quantity * p.selling_price) AS total_revenue
 FROM
@@ -331,7 +343,7 @@ FROM
 
               <button class="copy-btn"><ion-icon name="clipboard-outline"></ion-icon> Copy SQL</button>
 
-              <pre class="code-block"><code>
+              <pre class="code-block"><code class="language-sql">
 SELECT
     p.product_name,
     SUM(od.quantity * p.selling_price) AS revenue
@@ -367,7 +379,7 @@ LIMIT
 
               <button class="copy-btn"><ion-icon name="clipboard-outline"></ion-icon> Copy SQL</button>
 
-              <pre class="code-block"><code>
+              <pre class="code-block"><code class="language-sql">
 SELECT
     DATE_TRUNC ('month', o.order_date) AS month,
     SUM(od.quantity * p.selling_price) AS revenue
@@ -403,7 +415,7 @@ ORDER BY
 
               <button class="copy-btn"><ion-icon name="clipboard-outline"></ion-icon> Copy SQL</button>
 
-              <pre class="code-block"><code>
+              <pre class="code-block"><code class="language-sql">
 SELECT
     c.customer_id,
     c.customer_name,
@@ -441,7 +453,7 @@ ORDER BY
 
               <button class="copy-btn"><ion-icon name="clipboard-outline"></ion-icon> Copy SQL</button>
 
-              <pre class="code-block"><code>
+              <pre class="code-block"><code class="language-sql">
 WITH
   customer_revenue AS (
     SELECT
@@ -515,9 +527,11 @@ WHERE
             </h3>
 
             <p>
-              Used normalized relational structure with optimized joins between <strong><code>customers</code></strong>,
-              <strong><code>orders</code></strong>, <strong><code>order_details</code></strong>, and
-              <strong><code>products</code></strong> to accurately
+              Used normalized relational structure with optimized joins between <strong><code
+                  class="language-sql">customers</code></strong>,
+              <strong><code class="language-sql">orders</code></strong>, <strong><code
+                  class="language-sql">order_details</code></strong>, and
+              <strong><code class="language-sql">products</code></strong> to accurately
               compute revenue and customer metrics.
             </p>
 
@@ -544,8 +558,10 @@ WHERE
             </h3>
 
             <p>
-              Used <strong><code>RANK()</code></strong>, <strong><code>DENSE_RANK()</code></strong>, and
-              <strong><code>NTILE()</code></strong> to analyze product performance and perform Pareto analysis for top
+              Used <strong><code class="language-sql">RANK()</code></strong>, <strong><code
+                  class="language-sql">DENSE_RANK()</code></strong>, and
+              <strong><code class="language-sql">NTILE()</code></strong> to analyze product performance and perform
+              Pareto analysis for top
               revenue-generating customers.
             </p>
 
@@ -559,7 +575,8 @@ WHERE
             </h3>
 
             <p>
-              Used <strong><code>GROUP BY</code> with aggregated metrics</strong> to efficiently calculate revenue,
+              Used <strong><code class="language-sql">GROUP BY</code> with aggregated metrics</strong> to efficiently
+              calculate revenue,
               profit, and customer lifetime value across multiple tables.
             </p>
 
@@ -1119,6 +1136,8 @@ WHERE
     <ion-icon name="arrow-up-outline"></ion-icon>
   </button>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
 </body>
 
 </html>
