@@ -242,14 +242,40 @@ body.nav-open {
   background: var(--color-primary);
   color: var(--color-black);
 
-  transition: transform 0.3s ease,
+  transition:
+    transform 0.3s ease,
     box-shadow 0.3s ease,
     background 0.3s ease;
+
+  position: relative;
+  overflow: hidden;
 }
 
-.btn:hover {
+/* .btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.35);
+} */
+
+.btn::after {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent);
+
+  transition: left 0.6s;
+}
+
+.btn:hover::after {
+  left: 100%;
 }
 
 .btn:active {
@@ -257,8 +283,33 @@ body.nav-open {
 }
 
 .btn-secondary {
-  background: var(--color-bg-secondary);
-  color: var(--color-white);
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-black);
+}
+
+/* ======= SECCTION DIVIDER ======= */
+.section {
+  position: relative;
+}
+
+.section:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 0.1rem;
+
+  margin: 6rem auto 0;
+
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
 }
 
 /* ========= Scroll Indicator ========== */
@@ -291,9 +342,172 @@ body.nav-open {
 }
 
 /* ===================================== */
+/* ======= FEATURED PROJECT ============ */
+/* ===================================== */
+
+.featured-project {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  align-items: center;
+
+  /* padding: 2rem; */
+  border-radius: var(--radius-lg);
+  transition: box-shadow var(--transition);
+}
+
+.featured-grid:hover {
+  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.2);
+}
+
+.featured-image img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.featured-content {
+  padding: 0 2rem 2rem 2rem;
+}
+
+.featured-badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--color-primary);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.featured-title {
+  color: var(--color-primary);
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.featured-text {
+  font-size: var(--fs-base);
+  opacity: 0.85;
+  margin-bottom: var(--space-sm);
+  text-align: left;
+}
+
+.featured-impact {
+  list-style: none;
+  padding: 0 0 0 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  opacity: 0.85;
+}
+
+.featured-buttons {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===================================== */
+/* ======= PROJECT TIMELINE ============ */
+/* ===================================== */
+
+.timeline {
+  position: relative;
+  margin-top: 4rem;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -0.4rem;
+  top: 0.5rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.timeline-content p {
+  font-size: 1.4rem;
+  opacity: 0.85;
+}
+
+.timeline-date {
+  display: block;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  margin-top: 0.8rem;
+}
+
+/* ===================================== */
 /* ============== SKILLS =============== */
 /* ===================================== */
 
+/* ============= TOOLKIT ============ */
+.toolkit-grid {
+  margin: 4rem 0 4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.toolkit-badge {
+  padding: 0.6rem 1.2rem;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+
+  transition: var(--transition);
+}
+
+.toolkit-badge:hover {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--color-primary);
+
+  transform: translateY(-2px);
+}
+
+/* ============= SKILLS STATS ============ */
 .skills-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
@@ -557,74 +771,72 @@ body.nav-open {
 }
 
 /* ===================================== */
-/* ======= FEATURED PROJECT ============ */
+/* ============== GITHUB =============== */
 /* ===================================== */
 
-.featured-project {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.featured-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-lg);
-  margin-top: var(--space-lg);
-  align-items: center;
-
-  padding: 1rem;
-  border-radius: var(--radius-lg);
-  transition: box-shadow var(--transition);
-}
-
-.featured-grid:hover {
-  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.2);
-}
-
-.featured-image img {
-  width: 100%;
-  border-radius: var(--radius-lg);
-}
-
-.featured-badge {
-  display: inline-block;
-  background: rgba(56, 189, 248, 0.15);
-  color: var(--color-primary);
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-sm);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.featured-title {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-}
-
-.featured-text {
-  font-size: var(--fs-base);
-  opacity: 0.85;
-  margin-bottom: var(--space-sm);
-}
-
-.featured-impact {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 2rem;
-}
-
-.featured-buttons {
+.github-container {
+  margin-top: 4rem;
   display: flex;
-  gap: 1.4rem;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* ===================================== */
-/* ======= PROJECT TIMELINE ============ */
-/* ===================================== */
+.github-container img {
+  width: 100%;
+  border-radius: 1rem;
+  opacity: 0.9;
+}
+
+.github-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 
 /* ===================================== */
 /* ============= PROJECTS ============== */
 /* ===================================== */
+
+.project-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-btn.active {
+  background: var(--color-primary);
+  color: var(--color-black);
+  border-color: var(--color-primary);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .projects-grid {
   display: grid;
@@ -661,9 +873,37 @@ body.nav-open {
 }
 
 .project-card:hover {
-  transform: translateY(-1rem);
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+  transform: translateY(-1rem) scale(1.02);
+  box-shadow:
+    0 1.5rem 4rem rgba(56, 189, 248, 0.15),
+    0 0 2.5rem rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(56, 189, 248, 0.5);
+}
+
+/* ===== Project Level Tag ===== */
+.project-level {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.project-level.advanced {
+  color: #22c55e;
+  border: 1px solid #22c55e;
+}
+
+.project-level.intermediate {
+  color: #f59e0b;
+  border: 1px solid #f59e0b;
+}
+
+.project-level.beginner {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
 }
 
 /* ===== Image ===== */
