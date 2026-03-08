@@ -937,7 +937,7 @@ body.nav-open {
 }
 
 .project-card:hover .project-image img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .project-content {
@@ -956,8 +956,8 @@ body.nav-open {
 
 .project-text {
   font-size: var(--fs-base);
-  line-height: 1.6;
-  opacity: 0.8;
+  line-height: 1.7;
+  opacity: 0.9;
 }
 
 .project-impact {
@@ -972,11 +972,20 @@ body.nav-open {
   opacity: 0.9;
 }
 
-.project-stack {
-  font-size: 1.3rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  opacity: 0.6;
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.project-tag {
+  font-size: 1.1rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 3rem;
 }
 
 .project-link {
