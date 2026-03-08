@@ -95,6 +95,14 @@
     font-size: 1.3rem;
     padding: 0.7rem 1.6rem;
   }
+
+  .architecture-pipeline {
+    flex-direction: row;
+  }
+
+  .pipeline-arrow {
+    transform: none;
+  }
 }
 
 /* ===== Desktop & Up (1024px+) ===== */
