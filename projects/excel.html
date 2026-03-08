@@ -4,61 +4,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Excel Marketing Funnel Analysis project by Amit Kumar featuring conversion tracking, CTR analysis, and automated KPI dashboard reporting.">
 
-  <title>Excel Marketing Funnel Analysis | Amit Kumar</title>
+  <title>Excel Sales Data Analysis | Amit Kumar</title>
+  <meta name="description"
+    content="Excel Sales Analysis project by Amit Kumar featuring profit analysis, regional performance insights, and business impact reporting.">
+
+  <meta name="author" content="Amit Kumar">
+
+  <meta property="og:title" content="Excel Sales Data Analysis | Amit Kumar">
+  <meta property="og:description"
+    content="Excel Sales Analysis project by Amit Kumar featuring profit analysis, regional performance insights, and business impact reporting.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amit-data.vercel.app">
 
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
-  <link rel="apple-touch-icon" href="../assets/images/logo.png" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
 
   <link rel="stylesheet" href="../css/general.css">
-  <link rel="stylesheet" href="../css/queries.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/queries.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 
   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
-
+  <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-  <script defer src="../js/script.js"></script>
+
+  <script defer src="../js/excel.js"></script>
 </head>
 
-<body>
+<body class="project-page">
+  <div class="scroll-progress"></div>
 
-  <!-- ================= PROJECT HERO ================= -->
+  <!-- =========================================== -->
+  <!-- ================== HEADER ================= -->
+  <!-- =========================================== -->
 
-  <header class="project-hero">
-    <div class="container">
+  <header class="header">
+    <div class="container header-container">
 
-      <nav class="breadcrumb">
-        <a href="../index.html">Home</a>
-        <span> / </span>
-        <span>Excel Marketing Funnel</span>
+      <!-- Logo -->
+      <a href="#" class="logo">
+        AK
+      </a>
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#database-structure">Database Structure</a></li>
+          <li><a class="nav-link" href="#sql-techniques">SQL Techniques</a></li>
+          <li><a class="nav-link" href="#key-insights">Key Insights</a></li>
+          <li><a class="nav-link" href="#analysis-results">Analysis Results</a></li>
+          <li><a class="nav-link" href="#business-impact">Business Impact</a></li>
+        </ul>
       </nav>
 
-      <h1 class="project-hero-title">Excel Marketing Funnel Analysis</h1>
+      <div class="nav-overlay"></div>
 
-      <p class="project-hero-subtitle">
-        Conversion rate optimization dashboard built in Excel to track CTR,
-        stage transitions, and revenue distribution.
-      </p>
-
-      <a href="https://github.com/Amit-K-Dev/Sales-Data-Analysis-Project" target="_blank" rel="noopener noreferrer"
-        class="btn">
-        View GitHub Repository
-      </a>
+      <!-- Mobile Button -->
+      <button class="btn-mobile-nav" aria-label="Toggle navigation">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav close-icon" name="close-outline"></ion-icon>
+      </button>
 
     </div>
   </header>
 
-  <!-- ================= MAIN CONTENT ================= -->
-
   <main>
 
+    <!-- =========================================== -->
+    <!-- ============== PROJECT HERO =============== -->
+    <!-- =========================================== -->
+
+    <section class="project-hero">
+      <div class="container">
+
+        <h1 class="project-hero-title">Excel Sales Data Analysis</h1>
+
+        <p class="project-hero-subtitle">
+          End-to-end Sales Data Analysis using Excel dashboards and SQL. Includes profit analysis, regional performance
+          insights,
+          and business impact reporting.
+        </p>
+
+        <a href="https://github.com/Amit-K-Dev/Sales-Data-Analysis-Project" target="_blank" rel="noopener noreferrer"
+          class="btn">
+          View Project
+        </a>
+
+      </div>
+
+    </section>
+
     <!-- ===== Overview Section ===== -->
-    <section class="section">
+    <section class="section project-overview">
       <div class="container">
 
         <h2 class="section-title">Project Overview</h2>
@@ -66,15 +112,13 @@
         <p>
           This project focuses on analyzing user journey data through a marketing funnel
           using Excel to identify drop-off points and optimize conversion performance.
-        </p>
 
-        <h3>Objective</h3>
-        <p>
           To evaluate conversion rates across funnel stages and measure the impact
           of marketing performance on revenue generation.
         </p>
 
       </div>
+
     </section>
 
     <!-- ===== Dashboard Preview ===== -->
@@ -88,61 +132,9 @@
         </div>
 
       </div>
+      
     </section>
-
-    <!-- ===== Tools & Technical Implementation ===== -->
-    <section class="section">
-      <div class="container">
-
-        <h2 class="section-title">Tools & Technical Implementation</h2>
-
-        <ul>
-          <li>Microsoft Excel</li>
-          <li>Advanced Formulas (IF, SUMIFS, INDEX-MATCH)</li>
-          <li>Pivot Tables & Charts</li>
-          <li>Conditional Formatting</li>
-          <li>Automated KPI Calculations</li>
-        </ul>
-
-        <h3>Metrics Tracked</h3>
-        <ul>
-          <li>Click-Through Rate (CTR)</li>
-          <li>Stage-to-Stage Conversion Rate</li>
-          <li>Customer Acquisition Analysis</li>
-          <li>Revenue Split (New vs Returning Customers)</li>
-        </ul>
-
-      </div>
-    </section>
-
-    <!-- ===== Metrics Section ===== -->
-    <section class="section dark-section">
-      <div class="container">
-
-        <h2 class="section-title">Key Insights Identified</h2>
-
-        <div class="metrics-grid">
-
-          <div class="metric-card">
-            <h3>12%</h3>
-            <p>Average CTR</p>
-          </div>
-
-          <div class="metric-card">
-            <h3>35%</h3>
-            <p>Conversion Drop at Add-to-Cart Stage</p>
-          </div>
-
-          <div class="metric-card">
-            <h3>40%</h3>
-            <p>Revenue from Returning Customers</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
+    
     <!-- ===== Business Impact ===== -->
     <section class="section">
       <div class="container">
@@ -166,3 +158,4 @@
 </body>
 
 </html>
+
