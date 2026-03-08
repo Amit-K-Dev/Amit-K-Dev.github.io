@@ -86,24 +86,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== GLOBAL BACKGROUND GLOW ===== */
-/* body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-
-  background:
-    radial-gradient(circle at 20% 20%,
-      rgba(56, 189, 248, 0.08),
-      transparent 40%),
-    radial-gradient(circle at 80% 80%,
-      rgba(99, 102, 241, 0.06),
-      transparent 40%);
-
-  pointer-events: none;
-} */
-
 body::before {
   content: "";
   position: fixed;
@@ -139,7 +121,6 @@ body::after {
 /* ===== Offset for fixed header ===== */
 main {
   margin-top: var(--header-height);
-
   width: 100%;
 }
 
@@ -218,13 +199,6 @@ code {
   transform: translateY(6rem);
   transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.section-divider {
-  height: 1px;
-  width: 100%;
-  margin: 8rem 0;
-  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.5), transparent);
 }
 
 .section.reveal {
