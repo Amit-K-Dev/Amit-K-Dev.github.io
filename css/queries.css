@@ -53,10 +53,6 @@
     grid-template-columns: 1fr;
   }
 
-  .featured-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   /* ======== SQL TECHNIQUES ========= */
   .code-block {
     padding: 2rem;
@@ -68,6 +64,36 @@
 
   .copy-btn {
     font-size: 1.2rem;
+  }
+
+  .timeline {
+    padding-left: 3rem;
+  }
+
+  .timeline-dot {
+    left: -0.2rem;
+  }
+
+  .toolkit-grid {
+    gap: 1.4rem;
+  }
+
+  .toolkit-badge {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .github-coontainer img {
+    max-width: 100%;
+  }
+
+  .project-filters {
+    gap: 1rem;
+  }
+
+  .filter-btn {
+    font-size: 1.3rem;
+    padding: 0.7rem 1.6rem;
   }
 }
 
@@ -126,5 +152,13 @@
   /* ==== ANALYSIS RESULTS SECTION ==== */
   .results-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-badge {
+    margin-top: 2rem;
   }
 }
