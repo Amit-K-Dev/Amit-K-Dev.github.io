@@ -251,11 +251,6 @@ body.nav-open {
   overflow: hidden;
 }
 
-/* .btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 1.2rem 2.4rem rgba(56, 189, 248, 0.35);
-} */
-
 .btn::after {
   content: "";
   position: absolute;
@@ -381,13 +376,12 @@ body.nav-open {
   padding: 0.4rem 1rem;
   border-radius: var(--radius-sm);
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .featured-title {
-  color: var(--color-primary);
   font-size: 2.8rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0 1rem 0;
   text-align: left;
 }
 
@@ -396,6 +390,23 @@ body.nav-open {
   opacity: 0.85;
   margin-bottom: var(--space-sm);
   text-align: left;
+}
+
+.featured-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.tool {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 5rem;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
 }
 
 .featured-impact {
@@ -784,6 +795,12 @@ body.nav-open {
   width: 100%;
   border-radius: 1rem;
   opacity: 0.9;
+}
+
+.github-text {
+  margin-top: 2rem;
+  font-size: var(--fs-base);
+  opacity: 0.85;
 }
 
 .github-link {
@@ -1330,33 +1347,6 @@ textarea:focus {
 }
 
 /* ================================== */
-/* ===== Subtle Section Divider ===== */
-/* ================================== */
-
-.section+.section {
-  position: relative;
-}
-
-.section+.section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 8rem;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* ================================== */
-/* ========= DARK SECTION =========== */
-/* ================================== */
-
-.dark-section {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-/* ================================== */
 /* ========= PROJECT PAGE =========== */
 /* ================================== */
 
@@ -1432,7 +1422,7 @@ textarea:focus {
   font-weight: 600;
 }
 
-.difficulty-intermediate {
+.difficulty-advanced {
   background: rgba(56, 189, 248, 0.15);
   border: 1px solid rgba(56, 189, 248, 0.5);
   color: var(--color-primary);
@@ -1472,6 +1462,50 @@ textarea:focus {
 
 .project-overview .section-text strong {
   color: var(--color-primary);
+}
+
+/* ======== PROJECT ARCHITECTURE ========= */
+.architecture-pipeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.pipeline-step {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.4rem;
+  padding: 2rem 2.6rem;
+  text-align: center;
+  min-width: 14rem;
+  backdrop-filter: blur(8px);
+}
+
+.pipeline-step ion-icon {
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+}
+
+.pipeline-step h3 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.pipeline-step p {
+  font-size: 1.2rem;
+  opacity: 0.75;
+}
+
+.pipeline-arrow {
+  font-size: 2rem;
+  color: var(--color-primary);
+  transform: rotate(90deg);
+  opacity: 0.7;
 }
 
 /* ======== DATABASE SCHEMA ========= */
